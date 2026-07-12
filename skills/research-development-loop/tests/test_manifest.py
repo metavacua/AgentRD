@@ -24,9 +24,9 @@ def test_scaffold_is_least_privilege():
 
 def test_scaffold_docs_dir_is_decoupled():
     # The base default must not bake the `superpowers` plugin name into every project's path.
-    m = tomllib.loads(schema.scaffold())
-    assert m["project"]["docs_dir"] == "docs"
-    assert "superpowers" not in schema.scaffold()
+    s = schema.scaffold()
+    assert tomllib.loads(s)["project"]["docs_dir"] == "docs"
+    assert "superpowers" not in s
 
 def test_validate_rejects_missing_section():
     m = tomllib.loads(schema.scaffold())

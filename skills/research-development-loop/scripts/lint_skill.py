@@ -20,15 +20,22 @@ Exit 0 iff every file passes; prints one line per violation.
 """
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
 
 import yaml  # real YAML parser — a flat parser cannot detect invalid-YAML frontmatter
 
-NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
-NAME_MAX = 64
-DESC_MAX = 1024
+# Single source of truth: the declarative schema drives the checks (see module docstring),
+# so the code and references/skill-frontmatter.schema.json cannot silently drift.
+_SCHEMA = json.loads(
+    (Path(__file__).resolve().parent.parent / "references" / "skill-frontmatter.schema.json").read_text()
+)
+_PROPS = _SCHEMA["properties"]
+NAME_RE = re.compile(_PROPS["name"]["pattern"])
+NAME_MAX = _PROPS["name"]["maxLength"]
+DESC_MAX = _PROPS["description"]["maxLength"]
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---", re.S)
 
 
