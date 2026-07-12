@@ -22,16 +22,17 @@ cannot start or correctly continue without it), raise a **user prompt** naming t
 capability and the exact grant that satisfies it, then halt. Never produce a false-clean.
 Criticality is declared per step, not judged algorithmically.
 
-**The ONLY valid basis for skipping is a missing capability grant.** A **missing grant** is the
-sole axis on which a step may be skipped. Effort, cost, or the agent's sense that a mandated
-step is "disproportionate," "overkill," or "not worth it" is **NEVER** a valid skip reason.
+**The ONLY valid basis for skipping is an empirical incapability.** A required capability (a tool,
+skill, dependency, permission, or resource) is usable only when `granted ∩ present` — declared in
+the manifest's grants AND resolvable in the environment. A step is skipped ONLY when a capability
+it requires is **missing** — ungranted, absent, or both (diagnosed `need-grant` / `need-install` /
+`need-both`). Effort, cost, or the agent's sense that a step is "disproportionate" or "not worth
+it" is **NEVER** a valid skip reason; proportionality is not the agent's call.
 
-**Proportionality is undecidable (Rice-correct).** Triviality/effort is undecidable and MUST NOT
-be auto-judged by the agent (Rice's theorem — the same principle the `rdl-brainstorming` notation
-valve applies). Every mandated phase and step defaults to **in-scope and required**. Scope may be
-reduced ONLY by an **explicit user assertion**, recorded as such. In the Phase 5 negative
-inventory, every "deferred" item MUST cite either (a) a missing capability grant or (b) an
-explicit user-asserted exception — **never agent discretion**. An item deferred on agent
+Every mandated phase and step defaults to **in-scope and required**. Scope may be reduced ONLY by
+an **explicit user assertion**, recorded as such. In the Phase 5 negative inventory, every
+"deferred" item MUST cite either (a) a required capability that is not `granted ∩ present`, or
+(b) an explicit user-asserted exception — **never agent discretion**. An item deferred on agent
 discretion is a **false-clean**, and relabeling an effort judgment as a "logged skip" is the same
 false-clean by another name.
 
@@ -238,9 +239,9 @@ legitimate grant-based skip (named, never silent). Apply the **honesty mandate**
 2. What test failures would NOT appear as failures in the test suite — conditions where the implementation silently produces wrong output without raising an exception?
 3. What conditions would cause this implementation to fail before any hook fires — unsurvivable failure modes whose detection requires in-model absence tracking, not event-driven hooks?
 4. What was explicitly deferred, excluded from scope, or left unverified, and why? Each deferred
-   item MUST cite a missing capability grant or an explicit user-asserted exception — never agent
-   discretion (see the Rice-correct proportionality rule at the top). "It seemed disproportionate"
-   is a false-clean, not a deferral.
+   item MUST cite a required capability that is not `granted ∩ present`, or an explicit
+   user-asserted exception — never agent discretion (see the skip rule at the top). "It seemed
+   disproportionate" is a false-clean, not a deferral.
 
 This section is not optional. A paper that omits the negative inventory has failed the honesty mandate regardless of how complete its positive claims are. The N entries from the Research Residual are the primary input to this section — they were captured at research time precisely because tests and hooks cannot see them. The absences are the part that future work, dependent implementations, and successor agents most need to know.
 

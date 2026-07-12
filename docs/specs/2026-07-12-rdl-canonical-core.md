@@ -48,13 +48,15 @@ the *non-essential-undecidable* row, with its missing axiom named. A gap MUST be
 non-essential (add the axiom) unless shown essentially undecidable (halt) — the two are not
 interchangeable.
 
-## 4. Capability model (κ) — formal DOF-reducers
+## 4. Phase model (κ) — formal DOF-reducers
 
-A capability `κ` is a contract `⟨pre, reduction, post, accept⟩`:
+A **phase** `κ` is a contract `⟨pre, reduction, post, accept⟩`:
 `κ : (S, W) → (S′, W′)` over a target free-variable set `W`, where `post ⇒ (|W′| < |W|)` or a
-`T`-classification, and `accept` is a mechanically checkable postcondition.
+`T`-classification, and `accept` is a mechanically checkable postcondition. (A phase is *not* a
+capability. A **capability** is a tool / skill / dependency / permission / resource that is
+`granted ∩ present`; a phase is carried out by binding it to a capable skill — see §5.)
 
-Canonical capabilities (one module each):
+Canonical phases (one module each):
 
 | κ | Reduction it performs | accept (checkable) |
 |---|---|---|
@@ -69,20 +71,22 @@ Canonical capabilities (one module each):
 
 ## 5. Adaptive dispatch (D) — open-ended, not hardcoded
 
-For each `κ`, bind at runtime to the **best available** skill whose contract matches, discovered
-from the (open-ended) available-skills set. Precedence:
+For each phase `κ`, bind at runtime to the **best available** capable skill whose contract matches,
+discovered from the (open-ended) available-skills set. Precedence:
 
 ```
-most-specific available skill  ≻  RDL's own capability module  ≻  prompt (UNDERDETERMINED: name the missing capability)
+most-specific available skill  ≻  the RDL's own fallback method for the phase  ≻  prompt (UNDERDETERMINED: name the missing capability)
 ```
 
 No provider is hardcoded. `superpowers:<x>`, when present, is one admissible binding of the
-matching `κ` — never a dependency, never erased. Binding MUST be recorded (which skill satisfied
-which `κ`) so the run is reproducible.
+matching phase — never a dependency, never forbidden. The loop **uses what is installed** and
+falls back to its own method only when nothing capable is present; it never forbids a skill that
+may or may not be installed. Binding MUST be recorded (which capability satisfied which phase) so
+the run is reproducible.
 
 ## 6. Leverage mechanism (H) — one hook
 
-A single `SessionStart`-class hook injects **this core** (I, T, D, and the capability index) into
+A single `SessionStart`-class hook injects **this core** (I, T, D, and the phase index) into
 context, so the governing contract is always present — the one mechanical primitive, carrying a
 *formal contract* rather than prose discipline. (Superpowers gets its leverage from one injection
 hook; we inject a formalism, not exhortation.)
@@ -91,12 +95,12 @@ hook; we inject a formalism, not exhortation.)
 
 ```
 research-development-loop/
-  SKILL.md                 # thin orchestrator: I, T, D, capability index, links only
+  SKILL.md                 # thin orchestrator: I, T, D, phase index, links only
   core/
     invariant.md           # §2 I
     terminal.md            # §3 T
     dispatch.md            # §5 D + binding record format
-  capabilities/
+  phases/
     research.md design.md plan.md develop.md
     isolate-root-cause.md verify.md author-skill.md integrate.md   # §4, one κ per file
   hooks/rdl-core.json      # §6 H (SessionStart injection of the core)
@@ -104,12 +108,12 @@ research-development-loop/
   scripts/lint_skill.py    # existing; extended per author-skill.accept
 ```
 
-Each `capabilities/<κ>.md` states only: contract, the method, and the checkable `accept`. The
-orchestrator holds no phase prose — it holds I, T, and D.
+Each `phases/<κ>.md` states only: contract, the method, and the checkable `accept`. The
+orchestrator holds no per-phase procedure — it holds I, T, and D plus global governance.
 
 ## Open (UNDERDETERMINED — the missing equations, for the reviewer)
 
-- U1: capability set — is the §4 basis complete/minimal, or add/remove a `κ`?
+- U1: phase set — is the §4 basis complete/minimal, or add/remove a `κ`?
 - U2: hook packaging — a skill chain cannot self-install a `SessionStart` hook; H ships as a
   `hooks/rdl-core.json` + a documented `settings.json` merge (user applies), or via `update-config`.
   Which delivery? (This is the one variable I cannot pin without you.)
