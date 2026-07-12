@@ -77,6 +77,13 @@
   <xsl:template match="d:literal|d:tag"><xsl:text>\texttt{</xsl:text><xsl:apply-templates mode="tex"/><xsl:text>}</xsl:text></xsl:template>
   <xsl:template match="d:quote"><xsl:text>``</xsl:text><xsl:apply-templates/><xsl:text>''</xsl:text></xsl:template>
 
+  <!-- Default-mode body text (para, listitem, entry, abstract) must also escape
+       LaTeX specials; literal/tag/title switch to tex mode explicitly, so there is
+       no double escaping. -->
+  <xsl:template match="text()">
+    <xsl:call-template name="esc"><xsl:with-param name="s" select="."/></xsl:call-template>
+  </xsl:template>
+
   <!-- tex mode escapes special characters in plain text runs -->
   <xsl:template match="d:title" mode="tex"><xsl:apply-templates mode="tex"/></xsl:template>
   <xsl:template match="text()" mode="tex">

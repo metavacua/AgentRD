@@ -41,3 +41,6 @@ See finding 3 in `src/02-review.xml`.
    the manifest. Repaired + guarded.
 3. The scholarly-white-paper skill's **own example does not validate** against stock DocBook 5.0
    (sibling `<title>` after XIncluded `<info>`). Authored in the validating pattern instead.
+4. **Decoupled prose, re-coupled diagram** — a recursive RDL loop found the state-machine diagram
+   still named the superpowers skills as the phase method, uncaught by the 83-test suite. Diagram
+   relabelled to the standards; credit-block-aware guardrail added.

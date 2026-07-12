@@ -78,6 +78,27 @@
     <literal>xmllint --relaxng</literal> and <literal>jing</literal>.</para>
   </section>
 
+  <section xml:id="finding-stale-diagram" role="finding" condition="confirmed">
+    <title>Finding 4 — Decoupled prose, re-coupled diagram (found by a recursive loop)</title>
+    <para>A subsequent RDL loop whose subject was the RDL skill itself found that the decoupling had
+    been applied to the prose and the standards table but <emphasis>not</emphasis> to the
+    state-machine diagram: its nodes still named the superpowers skills as the phase method
+    (<literal>verification-before-completion</literal>, <literal>finishing-a-development-branch</literal>,
+    <literal>systematic-debugging</literal>) and the skill-gap edge still pointed to
+    <literal>writing-skills</literal> / <literal>skill-creator</literal>. The diagram directly
+    contradicted the same document's claim that the loop never requires the plugin.</para>
+    <para>Crucially, the 83-test suite did not catch this. The existing guardrail
+    (<literal>test_no_hard_superpowers_invocation</literal>) matched only the imperative pattern
+    <literal>invoke/inherit superpowers:</literal>; the bare skill base-names in the diagram carried
+    no <literal>superpowers:</literal> prefix and passed every test. This is a concrete instance of
+    the paper's own negative-inventory item&#160;1 — a grep-clean, test-green result is not a
+    decoupled result — reproduced against the decoupling work itself one turn later. Repair: the
+    diagram now names each phase's standard (Root-Cause Analysis, Definition of Done and V&amp;V,
+    GitHub Flow, the Agent Skills format), and a credit-block-aware guardrail
+    (<literal>test_state_machine_decoupled.py</literal>) bans any reference-implementation skill name
+    outside the explicit credit block while asserting the diagram positively names each standard.</para>
+  </section>
+
   <section xml:id="negative-inventory">
     <title>Mandatory negative inventory</title>
     <para>The honesty mandate requires that every scholarly paper answer four questions about what
