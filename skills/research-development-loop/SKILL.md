@@ -46,10 +46,10 @@ digraph rdloop {
   brainstorm [label="1 Brainstorm\n(rdl-brainstorming)"];
   plans      [label="2 Writing Plans\n(rdl-writing-plans)"];
   dev        [label="3 Development\n(coding subagent + TDD)"];
-  verify     [label="4 Verification\n(verification-before-completion)"];
+  verify     [label="4 Verification\n(Definition of Done + V&V)"];
   paper      [label="5 Scholarly Review\n(scholarly-white-paper)"];
-  finish     [label="6 Finishing\n(finishing-a-development-branch)", shape=doublecircle];
-  debug      [label="Systematic Debug\n(systematic-debugging → mandates TDD)", shape=diamond, style=filled, fillcolor="#ffcccc"];
+  finish     [label="6 Finishing\n(GitHub Flow + Conventional Commits)", shape=doublecircle];
+  debug      [label="Systematic Debug\n(Root-Cause Analysis → mandates TDD)", shape=diamond, style=filled, fillcolor="#ffcccc"];
 
   research   -> brainstorm;
   brainstorm -> plans;
@@ -62,7 +62,7 @@ digraph rdloop {
   verify     -> debug    [label="anomaly"];
   verify     -> paper    [label="clean"];
   paper      -> finish;
-  paper      -> research [label="skill gap found\n→ writing-skills\nor skill-creator"];
+  paper      -> research [label="skill gap found\n→ Agent Skills format\n+ lint_skill.py"];
 }
 ```
 
@@ -164,7 +164,7 @@ Coding subagent prerequisite failures that commonly require user intervention:
 - Missing environment variables or API keys (coding agent cannot authenticate on its own)
 - Software not installed in the test runner's environment (missing pip/conda/system package)
 - Tasks out of scope for the coding agent's working directory (e.g., editing `~/.claude/skills/` from a repo-scoped agent)
-- Prompt contains Claude Code UI commands (`/goal`, `/skill-creator:`, `/hooks`) that the coding agent cannot interpret — the hook must surface this, not silently pass the raw slash command
+- Prompt contains Claude Code UI commands (`/goal`, `/hooks`, `/config`) that the coding agent cannot interpret — the hook must surface this, not silently pass the raw slash command
 
 ## Phase 4: Verification
 
