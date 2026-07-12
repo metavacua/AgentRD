@@ -8,7 +8,7 @@ name = "agentrd"
 version = "0.1.0"
 description = "Research-Development-Loop (RDL) skill chain: agnostic, manifest-governed, decoupled from the superpowers plugin."
 requires-python = ">=3.11"       # tomllib is stdlib from 3.11
-dependencies = []                # stdlib-only: tomllib, pathlib, re, json
+dependencies = ["pyyaml>=6"]     # real YAML parser for the skill-frontmatter linter
 
 [project.optional-dependencies]
 dev = ["pytest>=7"]              # test runner; not a runtime dependency

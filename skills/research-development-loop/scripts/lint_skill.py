@@ -10,10 +10,10 @@ Agent Skills open format (agentskills.io spec, verified 2026-07-12):
   license     OPTIONAL  string
   (additional keys allowed: allowed-tools, metadata, etc.)
 
-Stdlib-only (the project declares an empty dependency set via PEP 621): frontmatter
-is flat single-line `key: value`, so a minimal parser is used instead of PyYAML.
-The declarative source of truth is references/skill-frontmatter.schema.json; this
-module enforces the same rules in code so the linter has no third-party dependency.
+Frontmatter is parsed with a REAL YAML parser (PyYAML) — a flat key:value parser
+silently accepts YAML-invalid frontmatter (e.g. an unquoted `description` with a
+colon-space), which the actual skill loader drops entirely so the skill never
+triggers. The declarative source of truth is references/skill-frontmatter.schema.json.
 
 Usage:  python3 lint_skill.py <path/to/SKILL.md> [more...]
 Exit 0 iff every file passes; prints one line per violation.
@@ -24,24 +24,31 @@ import re
 import sys
 from pathlib import Path
 
+import yaml  # real YAML parser — a flat parser cannot detect invalid-YAML frontmatter
+
 NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 NAME_MAX = 64
 DESC_MAX = 1024
+FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---", re.S)
 
 
-def parse_frontmatter(text: str) -> dict | None:
-    """Return the flat frontmatter dict, or None if no `---`-delimited block leads the file."""
-    lines = text.splitlines()
-    if not lines or lines[0].strip() != "---":
-        return None
-    meta: dict[str, str] = {}
-    for line in lines[1:]:
-        if line.strip() == "---":
-            return meta
-        if ":" in line and not line.startswith((" ", "\t")):
-            key, _, val = line.partition(":")
-            meta[key.strip()] = val.strip()
-    return None  # no closing delimiter
+def parse_frontmatter(text: str):
+    """Parse the leading `---`-delimited YAML frontmatter with a real YAML parser.
+
+    Returns (meta, error): meta is a dict or None; error is a message or None. A
+    YAML parse failure is a hard error — the actual loader would silently drop every
+    field, so the skill would load with no name/description and never trigger.
+    """
+    m = FRONTMATTER_RE.match(text)
+    if not m:
+        return None, "frontmatter: no leading `---`-delimited YAML block found"
+    try:
+        meta = yaml.safe_load(m.group(1))
+    except yaml.YAMLError as e:
+        return None, f"frontmatter: invalid YAML ({str(e).splitlines()[0].strip()})"
+    if not isinstance(meta, dict):
+        return None, "frontmatter: not a YAML mapping"
+    return meta, None
 
 
 def validate_frontmatter(meta: dict) -> list[str]:
@@ -74,11 +81,10 @@ def validate_frontmatter(meta: dict) -> list[str]:
 
 def lint_skill(path) -> list[str]:
     """Lint a SKILL.md file. Returns violation strings ([] == pass)."""
-    path = Path(path)
-    text = path.read_text()
-    meta = parse_frontmatter(text)
-    if meta is None:
-        return ["frontmatter: no leading `---`-delimited YAML block found"]
+    text = Path(path).read_text()
+    meta, err = parse_frontmatter(text)
+    if err:
+        return [err]
     return validate_frontmatter(meta)
 
 

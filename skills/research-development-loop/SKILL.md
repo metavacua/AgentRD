@@ -1,6 +1,6 @@
 ---
 name: research-development-loop
-description: Use whenever a development task has any complexity, novelty, or requires coordination across multiple skills — orchestrates the full R&D lifecycle from research through brainstorming, planning, implementation, verification, and scholarly review. ALWAYS invoke this skill for feature work, bug investigations, new skill creation, or when any anomalous behavior appears during development. The loop is self-correcting: anomalies at any phase force systematic debugging and restart from research rather than ad-hoc patching. If you think the task might benefit from a principled approach, invoke this skill.
+description: Use whenever a development task has any complexity, novelty, or requires coordination across multiple skills — orchestrates the full R&D lifecycle from research through brainstorming, planning, implementation, verification, and scholarly review. ALWAYS invoke this skill for feature work, bug investigations, new skill creation, or when any anomalous behavior appears during development. The loop is self-correcting — anomalies at any phase force systematic debugging and restart from research rather than ad-hoc patching. If you think the task might benefit from a principled approach, invoke this skill.
 ---
 
 # Research Development Loop

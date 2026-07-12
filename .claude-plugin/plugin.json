@@ -1,0 +1,8 @@
+{
+  "name": "rdl",
+  "description": "Research-Development-Loop: a degrees-of-freedom-reducing R&D orchestrator with a canonical injected core (invariant + terminal classification + adaptive dispatch) and formal capability contracts. Improves on prose-discipline skill chains by standardizing, formalizing, and canonicalizing.",
+  "version": "0.1.0",
+  "author": { "name": "metavacua" },
+  "license": "AGPL-3.0-or-later",
+  "keywords": ["research", "development", "tdd", "systematic-debugging", "constraint-system", "skills", "orchestrator"]
+}
