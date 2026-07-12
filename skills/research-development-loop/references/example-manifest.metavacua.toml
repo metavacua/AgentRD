@@ -1,0 +1,45 @@
+# RDL/references/example-manifest.metavacua.toml
+# EXAMPLE ONLY — the historical metavacua environment expressed as explicit grants
+# above the least-privilege floor. Illustrative; not the default.
+
+[project]
+name = "babel-harness"
+target = "x86_64-linux"
+docs_dir = "docs/superpowers"
+vcs = "git"
+
+[capabilities]
+filesystem = ["~/babel-harness", "~/larql", "docs/superpowers"]
+network = ["api.github.com", "openrouter.ai"]
+subprocess = ["gh", "git", "pi-harness", "larql-probe", "bin/coding-agent", "python3", "pytest", "uv"]
+clock = true
+random = true
+threads = false
+gpu = false
+
+[resources]
+memory_budget_mb = 6300
+serialize_tasks = true
+
+[issues]
+tracker = "github"
+write_repos = ["metavacua/babel-harness", "metavacua/larql-to-sparql"]
+read_repos = ["metavacua/babel-harness", "metavacua/larql-to-sparql", "chrishayuk/larql"]
+
+[dependencies]
+standard = "pep621"          # babel-harness is a Python project → PEP 621 pyproject.toml
+manifest = "pyproject.toml"
+
+[delegation]
+subagent = "pi-harness"
+
+[security]
+default_posture = "deny"
+write_allowed = ["metavacua/babel-harness", "metavacua/larql-to-sparql"]
+
+[x.graph_context]
+vindex = "larql"
+scripts = ["scripts/github_graph.py"]
+
+[x.inference]
+wrapper = "larql-probe safe -- "

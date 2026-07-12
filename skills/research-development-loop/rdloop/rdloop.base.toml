@@ -1,0 +1,41 @@
+# rdloop.toml — Research-Development-Loop manifest (minimal non-trivial base).
+# Model: zero ambient authority (WASI Preview 2) + deny-all allowlist (iframe sandbox).
+# Every capability is DENIED unless explicitly granted. Absent = denied.
+
+[project]
+name = "unnamed-project"
+target = "wasm32v1-none"
+docs_dir = "docs/superpowers"
+vcs = "none"
+
+[capabilities]
+filesystem = []
+network = []
+subprocess = []
+clock = false
+random = false
+threads = false
+gpu = false
+
+[dependencies]
+standard = "cargo"
+manifest = "Cargo.toml"
+toolchain = "rust-toolchain.toml"
+
+[resources]
+memory_budget_mb = 64
+serialize_tasks = true
+
+[issues]
+tracker = "none"
+write_repos = []
+read_repos = []
+
+[delegation]
+subagent = "inline"
+
+[security]
+default_posture = "deny"
+write_allowed = []
+
+[x]

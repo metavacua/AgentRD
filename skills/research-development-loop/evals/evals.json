@@ -1,0 +1,169 @@
+{
+  "skill_name": "research-development-loop",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "phase0-runs-before-brainstorm",
+      "prompt": "Add a --verbose flag to bin/coding-agent that echoes each step name to stderr as it runs. The flag should default to off.",
+      "expected_output": "The skill should run Phase 0 research first: ground the date (step 0.1), perform a web search for any relevant context (step 0.2), read the current codebase state (step 0.3), check the issue tracker declared in [issues] (step 0.4), skipping with a logged reason if tracker=none or gh is ungranted, and produce a K/Q/C/E/D residual before entering Phase 1 Brainstorm. It should NOT jump straight to implementation.",
+      "assertions": [
+        {
+          "name": "runs-date-step-before-brainstorm",
+          "description": "Step 0.1 (date grounding) is executed before any brainstorm or plan phase begins"
+        },
+        {
+          "name": "gates-issue-check-on-manifest",
+          "description": "Step 0.4 consults [issues].tracker and skips (logged) when no tracker/gh grant exists, rather than assuming a specific repo"
+        },
+        {
+          "name": "emits-residual",
+          "description": "A Research Residual block (K/Q/C/E/D entries) is produced before Phase 1 Brainstorm"
+        },
+        {
+          "name": "invokes-brainstorming-skill",
+          "description": "Phase 1 is entered by invoking superpowers:brainstorming, not by jumping directly to implementation"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "dependency-analysis-answers-ordering",
+      "prompt": "I need to decide: should I implement task #13 (--remote integration test for _fetch_remote_triples) or task #14 (pre-compute and commit tests/fixtures/snapshot-94485d4.bin) first? Which one unblocks the other?",
+      "expected_output": "The skill should answer this via dependency analysis (step 0.5), not opinion. It should check whether #14's .vlp fixture is consumed by #13's test, determine the dependency direction, and produce a D entry in the residual showing the ordering with rationale. It should NOT give a preference-based answer without tracing the dependency.",
+      "assertions": [
+        {
+          "name": "uses-dependency-analysis",
+          "description": "The answer is grounded in step 0.5 dependency analysis (does A's output feed B?), not opinion or preference"
+        },
+        {
+          "name": "checks-fixture-consumption",
+          "description": "The skill checks whether the .vlp fixture file produced by #14 is consumed by #13's test (e.g., by grepping test files)"
+        },
+        {
+          "name": "produces-D-entry",
+          "description": "The residual contains a D (Dependencies) entry showing the task ordering with a causal reason"
+        },
+        {
+          "name": "gives-ordering-decision",
+          "description": "A concrete ordering decision (do #14 first, or independent) is produced, not just a list of considerations"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "eval_name": "anomaly-routes-to-systematic-debugging",
+      "prompt": "The smoke test passes but I'm seeing OOM kills in production. The coding-agent process gets killed after about 90 seconds under load. No test failure, just sudden death.",
+      "expected_output": "The skill should recognize this as a Phase 3/4 anomaly (OOM kill = resource exhaustion, which is on the anomaly list) and invoke superpowers:systematic-debugging before any fix attempt. It should NOT jump to proposing memory fixes or code changes. After systematic debugging, it should restart at Phase 0 Research.",
+      "assertions": [
+        {
+          "name": "identifies-as-anomaly",
+          "description": "The OOM kill is correctly classified as a Phase 3/4 anomaly (matches 'resource exhaustion' or 'process killed' on the anomaly list)"
+        },
+        {
+          "name": "invokes-systematic-debugging",
+          "description": "superpowers:systematic-debugging is invoked before any fix is proposed"
+        },
+        {
+          "name": "no-premature-fix",
+          "description": "No memory limit, cgroup, or code change is proposed before systematic debugging is complete"
+        },
+        {
+          "name": "back-edge-acknowledged",
+          "description": "The skill mentions that after the debug fix, Phase 0 Research will restart (the back-edge)"
+        }
+      ],
+      "files": []
+    }
+    ,
+    {
+      "id": 4,
+      "eval_name": "absence-detection-N-entries",
+      "prompt": "I've just finished implementing the GitHub vindex builder. The tests all pass. What parts of this capability are NOT covered by the existing test suite, and what conditions would fail silently without producing any test failure?",
+      "expected_output": "The skill should produce N (Negatives) entries in the residual identifying confirmed absences: untested conditions, capabilities that would fail silently (no exception, wrong output), and unsurvivable failure modes. It should NOT just list what IS tested. The Reject(P) analysis should expose what axioms must be false for the implementation to fail invisibly.",
+      "assertions": [
+        {
+          "name": "produces-N-entries",
+          "description": "The residual contains N (Negatives) entries for confirmed absences — untested conditions or silent failure modes, not just what was tested"
+        },
+        {
+          "name": "identifies-silent-failures",
+          "description": "At least one N entry describes a condition that would produce wrong output without raising an exception or test failure"
+        },
+        {
+          "name": "uses-reject-analysis",
+          "description": "Reject(P) analysis is applied to identify what axioms must be false for the implementation to fail undetectably"
+        },
+        {
+          "name": "does-not-only-list-passing",
+          "description": "The response goes beyond listing what tests pass — it explicitly maps what is absent from the test coverage"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "eval_name": "permission-denied-triggers-systematic-debug",
+      "prompt": "During Phase 3 development, the coding agent tried to write a file to a read-only upstream repo (one outside [issues].write_repos) and received a 403 permission denied from the GitHub API. What should we do next?",
+      "expected_output": "The skill should identify the PermissionDenied as a systematic debugging trigger — it is an environmental constraint anomaly (the plan assumed access that doesn't exist). It should invoke superpowers:systematic-debugging before any fix is proposed, then restart at Phase 0 Research. It should NOT just say 'use a write-allowed repo instead' without systematic debugging.",
+      "assertions": [
+        {
+          "name": "identifies-as-anomaly",
+          "description": "The permission denied is correctly classified as a systematic debugging trigger (environmental constraint anomaly), not just a mistake to correct"
+        },
+        {
+          "name": "invokes-systematic-debugging",
+          "description": "superpowers:systematic-debugging is invoked before any fix, redirect, or workaround is proposed"
+        },
+        {
+          "name": "no-premature-fix",
+          "description": "No 'just use a different remote instead' or other workaround is proposed before systematic debugging is complete"
+        },
+        {
+          "name": "back-edge-to-research",
+          "description": "After systematic debugging, the skill returns to Phase 0 Research (not Phase 3 directly)"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "eval_name": "phase5-mandatory-negative-inventory",
+      "prompt": "Phase 3 development is complete and Phase 4 verification passed: all 12 tests pass, zero warnings, every plan checkbox is checked. We are entering Phase 5 scholarly review. What must the scholarly paper cover beyond describing what worked?",
+      "expected_output": "The skill should mandate a negative inventory in the scholarly paper: what is NOT demonstrated by the test suite, what capabilities are claimed but not verified, what conditions would fail without producing a test failure, and what happens under resource exhaustion before any hook fires. The review must not be a victory lap — it must map the absences explicitly.",
+      "assertions": [
+        {
+          "name": "mandates-negative-inventory",
+          "description": "The response explicitly requires a negative inventory section — what is NOT demonstrated, NOT tested, or NOT verifiable under current conditions"
+        },
+        {
+          "name": "asks-about-absences",
+          "description": "The paper is required to answer 'what capabilities are NOT demonstrated by passing tests?' not just 'what capabilities were implemented?'"
+        },
+        {
+          "name": "survival-bias-awareness",
+          "description": "The response notes that test results only show survivable failures — invisible or unsurvivable failure modes must be separately enumerated"
+        },
+        {
+          "name": "honest-not-victory-lap",
+          "description": "The response explicitly states that the scholarly review is NOT a victory lap and limitations must be reported with equal depth to capabilities"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 99,
+      "eval_name": "bare-sandbox-no-false-clean",
+      "prompt": "Run the loop in a directory with no rdloop.toml, no git repo, no gh, and no language toolchains installed. Investigate whether the test suite passes.",
+      "expected_output": "The chain must scaffold a minimal non-trivial rdloop.toml and pause. It then resolves capability = granted AND present (U = G ∩ E) and checks the precondition. Because REQUIRED dependencies (the referenced native manifest's deps, and the loop's own required tools) are absent, the loop must declare itself INCAPABLE and HALT with a user prompt naming what to install — it must NOT 'skip everything and continue', and must NEVER report a false-clean (empty git status read as clean tree, or absent toolchains read as 'no dependencies'). OPTIONAL capabilities that are ungranted/absent (issue check 0.4, graph-context 0.6, git context under vcs=none, architecture rendering) emit a logged skip naming the disabled feature. Unusability is diagnosed to its axis (need-grant/need-install/need-both).",
+      "assertions": [
+        { "name": "scaffolds-manifest-on-absence", "description": "A minimal non-trivial rdloop.toml is scaffolded and the loop pauses for review" },
+        { "name": "required-missing-is-incapable-halt", "description": "Absent REQUIRED dependencies make the loop declare itself incapable and halt with an install prompt — it does not skip-and-continue" },
+        { "name": "optional-skip-not-false-clean", "description": "Ungranted/absent OPTIONAL capabilities emit a logged skip naming the disabled feature; never a false-clean" },
+        { "name": "axis-diagnosis", "description": "Each unusable capability is diagnosed as need-grant / need-install / need-both, not a bare skip" }
+      ],
+      "files": []
+    }
+  ]
+}

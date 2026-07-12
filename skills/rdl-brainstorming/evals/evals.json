@@ -1,0 +1,39 @@
+{
+  "skill_name": "rdl-brainstorming",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "valve-no-auto-triviality",
+      "prompt": "Design a one-line config change and, separately, a three-component service. Produce specs.",
+      "expected_output": "Both specs use EARS acceptance criteria and RFC 2119 constraints (universal cheap layer). The one-line change OMITS the Structurizr architecture section (only 1 element) and the ADR section (no >=2-alternative decision) — by content-gating, not by declaring the task 'trivial'. The three-component service INCLUDES a Structurizr .dsl model with a derived C4 view. The skill never claims to have decided triviality algorithmically.",
+      "assertions": [
+        { "name": "cheap-layer-universal", "description": "Both specs contain EARS ACs and ALL-CAPS RFC 2119 keywords" },
+        { "name": "arch-content-gated", "description": "Architecture section present iff >=2 elements; absent section is omitted, not written as 'N/A'" },
+        { "name": "no-triviality-judgment", "description": "The skill does not auto-decide task triviality to scale notation" }
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "structurizr-skip-when-ungranted",
+      "prompt": "Produce a multi-component design in an environment where structurizr is not usable (either ungranted, or granted but not installed).",
+      "expected_output": "The architecture.dsl source is still written (text needs no capability). Because structurizr is an OPTIONAL dependency, rendering/validation is skipped with a logged reason that NAMES the disabled feature (architecture-rendering) and the failing axis (need-grant vs need-install) — never a silent no-op and never a claim that the diagram was rendered.",
+      "assertions": [
+        { "name": "dsl-source-written", "description": "architecture.dsl is authored regardless of usability" },
+        { "name": "render-skip-names-feature", "description": "Render/validate emits a logged skip naming the disabled feature and the failing axis when structurizr is not usable" }
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "eval_name": "ac-task-test-traceability",
+      "prompt": "Given a design doc with AC-1..AC-3, hand off to rdl-writing-plans and inspect the plan.",
+      "expected_output": "Every plan task cites a live AC-n and the ADR-n that justifies it; each failing-test step asserts that AC's SHALL clause; no task cites a dangling AC not present in the design.",
+      "assertions": [
+        { "name": "tasks-cite-live-acs", "description": "Each task references an AC-n that exists in the design; no dangling references" },
+        { "name": "test-asserts-shall", "description": "The failing-test step asserts the cited AC's SHALL clause" }
+      ],
+      "files": []
+    }
+  ]
+}
