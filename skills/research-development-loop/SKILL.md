@@ -22,6 +22,19 @@ cannot start or correctly continue without it), raise a **user prompt** naming t
 capability and the exact grant that satisfies it, then halt. Never produce a false-clean.
 Criticality is declared per step, not judged algorithmically.
 
+**The ONLY valid basis for skipping is a missing capability grant.** A **missing grant** is the
+sole axis on which a step may be skipped. Effort, cost, or the agent's sense that a mandated
+step is "disproportionate," "overkill," or "not worth it" is **NEVER** a valid skip reason.
+
+**Proportionality is undecidable (Rice-correct).** Triviality/effort is undecidable and MUST NOT
+be auto-judged by the agent (Rice's theorem — the same principle the `rdl-brainstorming` notation
+valve applies). Every mandated phase and step defaults to **in-scope and required**. Scope may be
+reduced ONLY by an **explicit user assertion**, recorded as such. In the Phase 5 negative
+inventory, every "deferred" item MUST cite either (a) a missing capability grant or (b) an
+explicit user-asserted exception — **never agent discretion**. An item deferred on agent
+discretion is a **false-clean**, and relabeling an effort judgment as a "logged skip" is the same
+false-clean by another name.
+
 ## State Machine
 
 ```dot
@@ -71,8 +84,9 @@ A claim can be true, properly sourced, and even adversarially confirmed by a sub
 
 ## Phase 1: Brainstorm
 
-Invoke `rdl-brainstorming` (which inherits the superpowers brainstorming process and adds the
-structured-spec notation layer). Do not enter Phase 2 until it reaches its terminal state.
+Invoke `rdl-brainstorming` (a self-contained structured requirements-elicitation and
+design-review gate that emits an industry-standard structured spec). Do not enter Phase 2 until
+it reaches its terminal state.
 
 **Constraint:** Do not enter Phase 2 until `rdl-brainstorming` reaches its terminal state (it invokes `rdl-writing-plans`).
 
@@ -80,8 +94,10 @@ structured-spec notation layer). Do not enter Phase 2 until it reaches its termi
 
 ## Phase 2: Writing Plans
 
-Invoke `rdl-writing-plans` (inherits the superpowers writing-plans structure; adds RFC 2119
-Global Constraints and AC→task→test traceability). That skill produces the implementation plan at `docs/superpowers/plans/YYYY-MM-DD-<topic>.md`.
+Invoke `rdl-writing-plans` (a self-contained work-breakdown + Requirements-Traceability-Matrix +
+TDD plan template; adds RFC 2119 Global Constraints and AC→task→test traceability per
+ISO/IEC/IEEE 29148). That skill produces the implementation plan at
+`{[project].docs_dir}/plans/YYYY-MM-DD-<topic>.md`.
 
 **Constraint:** Every task in the plan must include a TDD step (failing test written and verified before any implementation). Plans without TDD steps are incomplete — reject them and revise.
 
@@ -105,8 +121,10 @@ genuinely cannot proceed inline and has no granted subagent is **critical → us
 After any delegated call, check the tool-call count; zero tool calls = delegation failed =
 prerequisite-failure anomaly (surface loudly).
 
-Fall back to `superpowers:subagent-driven-development` or `superpowers:test-driven-development`
-inline whenever the manifest-declared subagent is unavailable or the task is inline-only.
+When the manifest-declared subagent is unavailable or the task is inline-only, develop inline
+under **Test-Driven Development** (Kent Beck): write a failing test that asserts the task's
+`AC-n` `SHALL` clause, run it and confirm it fails, implement the minimum to pass, run it green,
+then commit. This is the same TDD discipline the plan's per-task steps encode.
 
 End-to-end demonstrations use `[delegation].demo_runner` if granted; otherwise demonstrate
 inline (non-critical, logged). Demonstrations are evidence: they either produce the expected
@@ -126,8 +144,11 @@ capabilities without demonstration output are assertions, not evidence.
 
 **On anomaly — standard path (execution started, something failed):**
 1. Stop immediately — do NOT attempt a fix
-2. Invoke `superpowers:systematic-debugging` (it mandates TDD for the fix)
-3. After root cause found and TDD-verified fix applied, restart at **Phase 0 Research** — the fix may invalidate design assumptions
+2. Run a **Root-Cause Analysis** (ASQ RCA): apply **5 Whys** to a single-cause anomaly, or an
+   **Ishikawa / fishbone** diagram when several causes may interact — never fix at the level of
+   the immediate symptom. Then write a **failing regression test** that reproduces the root
+   cause (TDD), confirm it fails, apply the minimum fix, and confirm it goes green.
+3. After the root cause is found and the TDD-verified fix applied, restart at **Phase 0 Research** — the fix may invalidate design assumptions
 
 **On anomaly — prerequisite failure (execution could not start):**
 
@@ -147,7 +168,10 @@ Coding subagent prerequisite failures that commonly require user intervention:
 
 ## Phase 4: Verification
 
-Invoke `superpowers:verification-before-completion`. Run the full test suite, check every plan requirement line-by-line, and verify smoke tests exit 0.
+Apply a **Definition of Done** gate backed by **Verification & Validation** (IEEE 1012): evidence
+before assertions. Run the full test suite, check every plan requirement line-by-line against the
+Requirements Traceability Matrix, and verify smoke tests exit 0. Nothing is "done" until its DoD
+line below is satisfied and observed.
 
 **Verification is clean when:**
 - Zero test failures **and zero collection errors** in the full suite
@@ -158,11 +182,18 @@ Invoke `superpowers:verification-before-completion`. Run the full test suite, ch
 - Smoke tests (where applicable) exit 0
 - No outstanding TODOs introduced by the implementation
 
-**On anomaly:** Same rule as Phase 3 — invoke `superpowers:systematic-debugging`, then restart at **Phase 0 Research**.
+**On anomaly:** Same rule as Phase 3 — run a Root-Cause Analysis (5 Whys / Ishikawa) and write a failing regression test before any fix, then restart at **Phase 0 Research**.
 
 ## Phase 5: Scholarly Review
 
-Invoke `scholarly-white-paper`. Apply the **honesty mandate**:
+Invoke `scholarly-white-paper`. This skill has a **declared toolchain requirement**: its canonical
+source is DocBook 5.x XML validated by a RELAX NG (incl. RELAX NG Compact) schema and rendered via
+XSLT — it needs `xmllint` (libxml2), `xsltproc` (libxslt), and `jing` (RELAX NG Compact), plus a
+local DocBook RNG schema, and optionally `pdflatex` for PDF. These MUST be granted in
+`[capabilities].subprocess` and present. If any required tool is ungranted or absent, apply the
+skip/prompt rule: name the missing tool and the exact grant/install that satisfies it and prompt —
+producing the paper's *source* is REQUIRED, but *rendering/validation* against a missing tool is a
+legitimate grant-based skip (named, never silent). Apply the **honesty mandate**:
 
 - Report capabilities and limitations with equal depth — known limitations (blocked work, resource constraints, missing dependencies) belong in the paper's limitations section, not omitted
 - Deferred work is reconciled against the tracker in `[issues]`. If `tracker = "none"` or
@@ -176,7 +207,7 @@ Invoke `scholarly-white-paper`. Apply the **honesty mandate**:
   |---------|-------------|
   | Deferred or blocked work | Issue — search first, add comment if exists, open only if absent |
   | Known limitation | Issue + paper's limitations section (both) |
-  | Architecture decision (future branches) | Spec file in `docs/superpowers/specs/` |
+  | Architecture decision (future branches) | Spec file in `{[project].docs_dir}/specs/` |
   | Branch-specific code suggestion | PR review comment only — never a spec |
 
   New issue format (when no existing issue covers this):
@@ -185,9 +216,20 @@ Invoke `scholarly-white-paper`. Apply the **honesty mandate**:
   - Labels: `deferred` or `blocked` as appropriate
   - What never goes in issues: PR-level preferences, one-off build failures already fixed, duplicate reports
 - Critical evaluation of each skill used is required — weaknesses and friction points count
-- If gaps or failures in existing skills are found, determine the severity:
-  - **Content gap** (missing technique, incomplete guidance, outdated step): invoke `superpowers:writing-skills` to propose an improvement — this patches the skill's content
-  - **Structural problem** (wrong state machine, wrong termination condition, fundamental design flaw): invoke `skill-creator:skill-creator` to redesign the skill — patching a structurally broken skill with `writing-skills` is symptom treatment, not root cause repair
+- If gaps or failures in existing skills are found, fix them per the **Agent Skills open format**
+  (agentskills.io — the open standard the chain's own skills conform to). This is the recursive
+  case: the loop modifying its own skills. Determine the severity:
+  - **Content gap** (missing technique, incomplete guidance, outdated step): edit the skill's
+    `SKILL.md` body / `references/` — this patches the skill's content. Progressive disclosure:
+    keep the frontmatter lean; push detail into `references/`.
+  - **Structural problem** (wrong state machine, wrong termination condition, fundamental design
+    flaw): redesign the skill's folder (SKILL.md + scripts/ + references/ + evals) from its
+    requirements — patching a structurally broken skill with a content edit is symptom treatment,
+    not root-cause repair.
+  - **In both cases**, every edited or new `SKILL.md` MUST pass the frontmatter linter
+    (`scripts/lint_skill.py`, schema `references/skill-frontmatter.schema.json`): `name` kebab-case
+    ≤64 chars, `description` ≤1024 chars stating what+when. A skill edit that fails the linter is
+    an anomaly (Root-Cause Analysis, not a re-save).
 - A skill gap that warrants a fix is a trigger for a new R&D loop whose subject is the skill itself
 
 **Mandatory negative inventory** — every scholarly paper must contain a named section answering all four of these questions explicitly:
@@ -195,7 +237,10 @@ Invoke `scholarly-white-paper`. Apply the **honesty mandate**:
 1. What capabilities are claimed but NOT demonstrated by any test or demonstration run?
 2. What test failures would NOT appear as failures in the test suite — conditions where the implementation silently produces wrong output without raising an exception?
 3. What conditions would cause this implementation to fail before any hook fires — unsurvivable failure modes whose detection requires in-model absence tracking, not event-driven hooks?
-4. What was explicitly deferred, excluded from scope, or left unverified, and why?
+4. What was explicitly deferred, excluded from scope, or left unverified, and why? Each deferred
+   item MUST cite a missing capability grant or an explicit user-asserted exception — never agent
+   discretion (see the Rice-correct proportionality rule at the top). "It seemed disproportionate"
+   is a false-clean, not a deferral.
 
 This section is not optional. A paper that omits the negative inventory has failed the honesty mandate regardless of how complete its positive claims are. The N entries from the Research Residual are the primary input to this section — they were captured at research time precisely because tests and hooks cannot see them. The absences are the part that future work, dependent implementations, and successor agents most need to know.
 
@@ -203,7 +248,11 @@ This section is not optional. A paper that omits the negative inventory has fail
 
 ## Phase 6: Finishing
 
-Invoke `superpowers:finishing-a-development-branch`.
+Integrate the branch per **GitHub Flow** (`main` is always deployable): confirm the prerequisites
+below, then present the integration options — merge, open a pull request for review, or clean up.
+Commit messages MUST follow **Conventional Commits 1.0.0** (`<type>[scope]: <description>`;
+`feat:`/`fix:`/`docs:`/`test:`/`refactor:`/`chore:`; `BREAKING CHANGE:` in the footer for a
+major). Gate every commit/PR on `[project].vcs = "git"` and the `[security].write_allowed` scope.
 
 **Prerequisites:**
 - Phase 4 verification clean (zero failures, every requirement checked)
@@ -232,6 +281,30 @@ All writes are governed by the manifest, deny-by-default:
 
 A resource in a read list but absent from the corresponding write list is read-only by
 construction. Any subagent result that violates these grants is discarded, not applied.
+
+---
+
+## Standards & reference implementations
+
+This loop is **self-contained**: it invokes no external skill plugin as a required step and runs
+to completion with the `superpowers` plugin absent. Each phase's method is an industry standard,
+inlined here or in the phase sub-skill:
+
+| Phase / step | Industry standard |
+|---|---|
+| 1 Brainstorm | structured requirements elicitation + design review; EARS, RFC 2119, C4/Structurizr, MADR (ISO/IEC/IEEE 29148) |
+| 2 Plan | Work-Breakdown Structure + Requirements Traceability Matrix + TDD (ISO/IEC/IEEE 29148; Beck) |
+| 3 Develop | Test-Driven Development (Kent Beck) |
+| Debug back-edge | Root-Cause Analysis — 5 Whys / Ishikawa (ASQ) + regression test |
+| 4 Verify | Definition of Done (Scrum) + Verification & Validation (IEEE 1012) |
+| 5 Skill authoring | Agent Skills open format (agentskills.io) + frontmatter lint (`scripts/lint_skill.py`) |
+| 6 Finish | GitHub Flow + Conventional Commits 1.0.0 |
+
+**Reference implementations (credit, not dependency).** The Superpowers plugin skills —
+`superpowers:brainstorming`, `writing-plans`, `test-driven-development`, `systematic-debugging`,
+`verification-before-completion`, `finishing-a-development-branch`, `writing-skills`, and
+`skill-creator:skill-creator` — are compatible reference implementations of the methods above.
+Where present they MAY be used interchangeably, but the loop never requires them.
 
 ---
 

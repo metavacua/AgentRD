@@ -186,4 +186,4 @@ Key references:
 - Carnielli, W., Coniglio, M.E., and Marcos, J. (2007). "Logics of Formal Inconsistency." *Handbook of Philosophical Logic*, Vol. 14, Springer.
 - Carnielli, W. and Rodrigues, A. (2019). "An epistemic approach to paraconsistency: a logic of evidence and truth." *Synthese* 196:3789–3813.
 
-In practice: a glut in research is analogous to the systematic-debugging rule "3+ failed fixes → question the architecture." The contradiction is not noise — it is a signal that an axiom of the surrounding system is false.
+In practice: a glut in research is analogous to the Root-Cause-Analysis rule "3+ failed fixes → question the architecture." The contradiction is not noise — it is a signal that an axiom of the surrounding system is false.

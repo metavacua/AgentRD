@@ -5,11 +5,11 @@
 [project]
 name = "babel-harness"
 target = "x86_64-linux"
-docs_dir = "docs/superpowers"
+docs_dir = "docs"
 vcs = "git"
 
 [capabilities]
-filesystem = ["~/babel-harness", "~/larql", "docs/superpowers"]
+filesystem = ["~/babel-harness", "~/larql", "docs"]
 network = ["api.github.com", "openrouter.ai"]
 subprocess = ["gh", "git", "pi-harness", "larql-probe", "bin/coding-agent", "python3", "pytest", "uv"]
 clock = true

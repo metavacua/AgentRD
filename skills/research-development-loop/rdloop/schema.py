@@ -14,7 +14,7 @@ BASE_MANIFEST = '''# rdloop.toml — Research-Development-Loop manifest (minimal
 [project]
 name = "unnamed-project"
 target = "wasm32v1-none"
-docs_dir = "docs/superpowers"
+docs_dir = "docs"
 vcs = "none"
 
 [capabilities]

@@ -12,8 +12,8 @@ A one-off PR decision that shouldn't bind future branches belongs in the PR desc
 
 | Content type | Destination |
 |---|---|
-| Architecture decision affecting all future branches | Spec file in `docs/superpowers/specs/` → commit to repo |
-| Skill definition or improvement | `~/.claude/skills/<name>/SKILL.md` → invoke `writing-skills` |
+| Architecture decision affecting all future branches | Spec file in `{[project].docs_dir}/specs/` → commit to repo |
+| Skill definition or improvement | `~/.claude/skills/<name>/SKILL.md` → author per the Agent Skills format, validate with `scripts/lint_skill.py` |
 | Implementation approach chosen for this PR | PR description |
 | Code suggestion on a specific diff line | PR review comment (inline) |
 | Out-of-scope bug found during review | New issue |
