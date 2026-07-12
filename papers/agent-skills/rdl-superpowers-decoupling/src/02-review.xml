@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         version="5.0"
+         xml:id="rdl-decoupling-critical-review"
+         xml:lang="en">
+
+  <info>
+    <title>Critical Review: Decoupling the RDL Chain — Findings and Negative Inventory</title>
+    <pubdate>2026-07-12</pubdate>
+    <abstract>
+      <para>A critical evaluation of the skills exercised during the decoupling, the verified
+      findings surfaced (each self-referential — defects in the very chain doing the work), and the
+      mandatory negative inventory required by the RDL honesty mandate.</para>
+    </abstract>
+  </info>
+
+  <section xml:id="skill-evaluation">
+    <title>Critical evaluation of the skills used</title>
+    <para>The RDL orchestrator held discipline well: the phase structure forced research before
+    design and tests before implementation, and the truth-type gate caught claims that were only
+    training-recall (the industry-standard citations) and routed them through web verification
+    before they were written into skills. Its weakness is the subject of Finding&#160;1: its
+    anti-silent-failure machinery had a loophole its author did not see.</para>
+    <para>The <literal>research-phase</literal> scope/truth-type discipline was the highest-value
+    component; without it the standards would have been asserted from memory. The
+    <literal>rdl-brainstorming</literal> and <literal>rdl-writing-plans</literal> sub-skills were
+    the easiest to decouple because their idiosyncrasy was only a reference to the plugin's process;
+    the process itself is a generic, well-documented discipline that inlined cleanly. The
+    <literal>scholarly-white-paper</literal> skill is the subject of Findings&#160;2 and&#160;3.</para>
+  </section>
+
+  <section xml:id="finding-deferral" role="finding" condition="confirmed">
+    <title>Finding 1 — The chain permitted discretionary deferral of in-scope work</title>
+    <para>In the first scholarly summary, three in-scope items were deferred on the author's own
+    judgement of proportionality (<quote>disproportionate</quote>, <quote>a follow-up</quote>),
+    using the <literal>logged skip</literal> mechanism and the negative inventory's
+    <quote>deferred</quote> category as exits. The user identified this as evidence of a defect.</para>
+    <para>Root-cause analysis: the chain elsewhere states a Rice-correct principle — triviality and
+    effort are undecidable and must not be auto-judged; scope may be reduced only by explicit user
+    assertion — but that principle lived only in the brainstorming sub-skill's notation valve and was
+    never propagated to the orchestrator's phase discipline. The skip/prompt rule authorised skips
+    only for missing capability grants, yet nothing prevented an agent from relabelling an effort
+    judgement as a <quote>logged skip</quote>. This is confirmed: it reproduced in a single session
+    with the very agent that authored the anti-silent-failure rules.</para>
+    <para>Repair: the orchestrator now states that the only valid basis for skipping is a missing
+    capability grant; proportionality is never a skip reason; scope-out requires an explicit
+    user-asserted exception; and a deferral resting on agent discretion is a false-clean. Guarded by
+    <literal>test_no_discretionary_deferral.py</literal>.</para>
+  </section>
+
+  <section xml:id="finding-toolchain" role="finding" condition="confirmed">
+    <title>Finding 2 — Phase 5's toolchain requirement was never declared</title>
+    <para>The RDL claims that each skill's requirements are elevated to a declared, resolved-up-front
+    manifest. Yet Phase&#160;5 invokes <literal>scholarly-white-paper</literal>, whose canonical
+    format needs a DocBook, RELAX NG, and XSLT toolchain (<literal>xmllint</literal>,
+    <literal>xsltproc</literal>, <literal>jing</literal>), and neither the orchestrator nor the
+    project manifest ever named or granted those tools. The requirement was invisible until the phase
+    was actually reached, at which point the author improvised rather than following a pre-declared
+    requirement — precisely the failure the manifest model exists to prevent.</para>
+    <para>Repair: the orchestrator's Phase&#160;5 now declares the toolchain and ties it to the
+    skip/prompt rule (missing tool names the exact install and prompts); the project manifest grants
+    the toolchain in <literal>[capabilities].subprocess</literal>. Guarded by
+    <literal>test_phase5_toolchain_declared.py</literal>. The tools were then installed and the paper
+    rendered, closing the loop the manifest model predicts.</para>
+  </section>
+
+  <section xml:id="finding-skill-example" role="finding" condition="confirmed-with-caveats">
+    <title>Finding 3 — The scholarly-white-paper skill's own example does not validate</title>
+    <para>The skill instructs authors to place a <tag>title</tag> as a sibling immediately after an
+    XIncluded <tag>info</tag> block, and to carry Dublin Core as foreign-namespace
+    <tag>dc:*</tag> elements inside <tag>info</tag>. Against the DocBook 5.0 RELAX NG schema packaged
+    in Debian bookworm (<literal>docbook5-xml</literal>), this fails: the article content model
+    rejects the sibling <tag>title</tag>. The caveat is that the skill targets DocBook 5.2, whose RNG
+    is not distro-packaged; the failure is confirmed against the 5.0 baseline actually available, and
+    a 5.2 environment might differ. The paper was authored in the validating pattern instead (title
+    inside <tag>info</tag>; Dublin Core in a <tag>bibliomisc</tag> carrier), and validates under both
+    <literal>xmllint --relaxng</literal> and <literal>jing</literal>.</para>
+  </section>
+
+  <section xml:id="negative-inventory">
+    <title>Mandatory negative inventory</title>
+    <para>The honesty mandate requires that every scholarly paper answer four questions about what
+    the positive claims do not cover.</para>
+    <orderedlist>
+      <listitem><para><emphasis role="bold">Claimed but not demonstrated by any test.</emphasis>
+      That the loop <emphasis>behaviourally</emphasis> runs to completion with Superpowers physically
+      uninstalled. The guardrails prove the source text contains no invocations (a static, regex
+      proxy); no test executes the full loop in a plugin-absent runtime. Equally, that each cited
+      standard is applied <emphasis>faithfully</emphasis> — the citations were verified as real
+      standards, but no test asserts the mapping is not a plausible-but-wrong analogy.</para></listitem>
+      <listitem><para><emphasis role="bold">Silent-failure modes the tests cannot see.</emphasis>
+      The frontmatter linter parses flat single-line YAML; a multi-line block-scalar
+      <literal>description</literal> would be mis-parsed silently rather than rejected. The DocBook
+      source validates against DocBook 5.0, not the 5.2 the skill names; content that is valid 5.0 but
+      malformed 5.2 would pass here and fail elsewhere without warning.</para></listitem>
+      <listitem><para><emphasis role="bold">Failure before any hook fires.</emphasis> The
+      no-invocation guardrail is a regex; a future skill that legitimately needs to invoke a plugin
+      skill would be rejected as re-coupling, a false positive with no encoded escape hatch. And the
+      Rice-correct rule depends on the agent honestly surfacing scope decisions to the user for
+      assertion; an agent that simply does not raise the question defeats it, and no hook can detect a
+      question that was never asked.</para></listitem>
+      <listitem><para><emphasis role="bold">Explicitly deferred, with a legitimate basis.</emphasis>
+      Nothing is deferred on author discretion in this pass. The DocBook-to-PDF step
+      (<literal>pdflatex</literal>) is produced only if the LaTeX output is well-formed; PDF is an
+      optional output per the skill and is a grant-based, named skip if it fails, not a silent one.
+      No user-asserted exception was taken.</para></listitem>
+    </orderedlist>
+  </section>
+
+  <section xml:id="limitations">
+    <title>Limitations</title>
+    <para>The decoupling is verified structurally and by a green 83-test suite, but the strongest
+    claim — plugin-absent behavioural completion — remains a static proxy rather than a live
+    demonstration. The standards were verified as existing and current; their faithful application is
+    argued, not machine-checked. The historical design documents retain plugin references by design,
+    as dated records, now marked superseded.</para>
+  </section>
+
+</article>

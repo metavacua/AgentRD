@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         version="5.0"
+         xml:id="rdl-superpowers-decoupling"
+         xml:lang="en">
+
+  <xi:include href="00-metadata.xml"/>
+
+  <section xml:id="introduction">
+    <title>Introduction</title>
+    <para>The Research-Development-Loop (RDL) is an orchestrator skill that drives development
+    tasks through a six-phase lifecycle: Research, Brainstorm, Plan, Develop, Verify, and a
+    scholarly review, with a systematic-debugging back-edge. As originally authored, the chain
+    delegated the method of several phases to a specific third-party plugin, Superpowers, by
+    invoking its skills by name (<literal>superpowers:systematic-debugging</literal>,
+    <literal>superpowers:verification-before-completion</literal>, and others) and by declaring
+    that its sub-skills <quote>inherit the superpowers process verbatim</quote>. This bound the
+    chain's correctness to the presence of one plugin.</para>
+    <para>This paper documents the decoupling of the RDL chain from that plugin. The governing
+    decision, taken by the user, was <emphasis>inline standard and credit</emphasis>: remove the
+    plugin as a required runtime dependency, inline a verified industry standard as the method of
+    each phase, and retain the plugin as a credited compatible reference implementation. The
+    success criterion is behavioural, not cosmetic: the loop must run to completion with the
+    Superpowers plugin absent.</para>
+  </section>
+
+  <section xml:id="two-couplings">
+    <title>Two kinds of coupling</title>
+    <para>A grep for the token <literal>superpowers</literal> across the chain returned 51 matches
+    in 13 files, but these fell into two structurally different classes that demand different
+    remedies.</para>
+    <itemizedlist>
+      <listitem><para><emphasis role="bold">Runtime-invocation coupling</emphasis> — imperative
+      invocations of <literal>superpowers:&lt;skill&gt;</literal> as required phase steps, and the
+      <quote>inherits the superpowers process</quote> dependency claims in the two sub-skills.
+      This is the load-bearing coupling: it makes the plugin a hard dependency.</para></listitem>
+      <listitem><para><emphasis role="bold">Path/name coupling</emphasis> — the hardcoded default
+      <literal>docs_dir = "docs/superpowers"</literal> baked into the manifest scaffold and echoed
+      in several references. Cosmetic, but it embeds the plugin's name into every scaffolded
+      project's output path.</para></listitem>
+    </itemizedlist>
+    <para>A grep-clean result is not the same as a decoupled result: a skill can stop
+    <emphasis>saying</emphasis> <quote>superpowers</quote> while still structurally
+    <emphasis>requiring</emphasis> the plugin. The operative test is whether the loop still runs
+    with the plugin uninstalled. This was captured as a guardrail
+    (<literal>test_no_hard_superpowers_invocation</literal>) that rejects any imperative invocation
+    or inheritance phrasing while permitting credit phrasings.</para>
+  </section>
+
+  <section xml:id="standards-mapping">
+    <title>Industry-standard replacements</title>
+    <para>Each idiosyncratic dependency was mapped to a standard that was web-verified against an
+    authoritative source before being written into a skill, in accordance with the chain's own
+    truth-type gate (a claim supported only by training-data recall is a Q entry, not a verified
+    K entry).</para>
+    <informaltable frame="all">
+      <tgroup cols="2">
+        <colspec colname="dep" colwidth="1*"/>
+        <colspec colname="std" colwidth="1.4*"/>
+        <thead>
+          <row><entry>Superpowers dependency</entry><entry>Verified industry standard</entry></row>
+        </thead>
+        <tbody>
+          <row><entry>brainstorming process</entry><entry>structured requirements elicitation and
+          design-review gate; EARS, RFC 2119, C4/Structurizr, MADR (ISO/IEC/IEEE 29148)</entry></row>
+          <row><entry>writing-plans structure</entry><entry>Work-Breakdown Structure plus
+          Requirements Traceability Matrix plus TDD (ISO/IEC/IEEE 29148; Beck)</entry></row>
+          <row><entry>test-driven-development</entry><entry>Test-Driven Development (Kent Beck)</entry></row>
+          <row><entry>systematic-debugging</entry><entry>Root-Cause Analysis — 5 Whys / Ishikawa
+          (ASQ) — plus a failing regression test</entry></row>
+          <row><entry>verification-before-completion</entry><entry>Definition of Done (Scrum) plus
+          Verification and Validation (IEEE 1012)</entry></row>
+          <row><entry>finishing-a-development-branch</entry><entry>GitHub Flow plus Conventional
+          Commits 1.0.0</entry></row>
+          <row><entry>writing-skills / skill-creator</entry><entry>Agent Skills open format
+          (agentskills.io) plus a frontmatter schema and lint script</entry></row>
+          <row><entry>subagent-driven-development</entry><entry>manifest <literal>[delegation]</literal>
+          policy (already environment-agnostic)</entry></row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+
+  <section xml:id="recursive-dependency">
+    <title>The recursive dependency: skill authoring</title>
+    <para>Because the task was itself a revision of the skills, the skill-authoring path
+    (Phase&#160;5's route to fixing skill gaps, originally <literal>superpowers:writing-skills</literal>
+    and <literal>skill-creator</literal>) was a recursive dependency of the loop: decoupling Phases
+    0&#8211;4 while leaving the self-modification path bound to the plugin would have been an
+    incomplete cut. The substitute is the <emphasis>Agent Skills open format</emphasis>, a real
+    open standard (originally developed by Anthropic, adopted across roughly forty agent products,
+    with an authoritative specification at agentskills.io). Its frontmatter rules are
+    machine-checkable: <literal>name</literal> is kebab-case
+    (<literal>^[a-z0-9]+(-[a-z0-9]+)*$</literal>, at most 64 characters, no leading, trailing, or
+    consecutive hyphen) and <literal>description</literal> is at most 1024 characters and must
+    state both what the skill does and when to use it.</para>
+    <para>These rules are enforced by a new, dependency-free linter
+    (<literal>scripts/lint_skill.py</literal>) with a declarative JSON-Schema companion
+    (<literal>references/skill-frontmatter.schema.json</literal>). The linter is self-hosting: all
+    six chain skills pass it. This makes the loop able to validate its own skill edits without any
+    external plugin.</para>
+  </section>
+
+  <section xml:id="manifest">
+    <title>The capability manifest</title>
+    <para>The chain is governed by an <literal>rdloop.toml</literal> manifest under a zero-ambient-
+    authority model (every capability denied unless explicitly granted) with the usability relation
+    <emphasis>capability = granted and present</emphasis>. During this work the project's own
+    manifest was corrected to practise what the chain preaches: the dependency standard was moved
+    from the <literal>custom</literal> last-resort opt-in to PEP&#160;621 with a real
+    <literal>pyproject.toml</literal>, and the Phase-5 toolchain
+    (<literal>xmllint</literal>, <literal>xsltproc</literal>, <literal>jing</literal>) was granted in
+    <literal>[capabilities].subprocess</literal> after the scholarly-review phase revealed it had
+    never been declared (see the companion review).</para>
+  </section>
+
+  <section xml:id="verification">
+    <title>Verification</title>
+    <para>The work was executed test-first. The test suite grew from 54 passing tests to 83 passing
+    tests with zero failures and zero collection errors. New guardrails assert the structural
+    properties that matter: no hard plugin invocation remains; the industry standards are named as
+    the actual method; the base-manifest default no longer embeds the plugin name; every chain skill
+    passes the Agent Skills linter; the discretionary-deferral loophole is closed; and the Phase-5
+    toolchain is declared and granted.</para>
+  </section>
+
+</article>
