@@ -96,8 +96,10 @@ leverage from the same one-injection channel.
 
 Injection alone makes the core a specification, not a contract. To make it a *contract*, wire
 runtime checks, cheapest/most-decidable first:
-1. **PreToolUse capability gate** — bind `schema.gate()`/`usable()` to a Bash/Write/Edit
-   permission decision so an ungranted subprocess/write is actually denied (deny-by-default enforced).
+1. **PreToolUse capability gate** — ✅ DONE: `hooks/enforce-capability.py` (registered in
+   `hooks/hooks.json`) routes a Bash command's executable through the **rdl-wasm `gate()`** and
+   emits an actual permission decision (allow/deny). Shadow by default; `RDL_ENFORCE=1` enforces.
+   Verified by `test_enforce_capability.py` (granted→allow, ungranted→deny via the wasm).
 2. **Stop/SubagentStop terminal check** — refuse termination unless the turn emitted exactly one
    of the five terminal classes.
 3. **Binding ledger** — a machine-checkable per-phase `phase → skill@source + accept-evidence`
