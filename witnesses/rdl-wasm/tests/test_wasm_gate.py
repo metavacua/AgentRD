@@ -12,8 +12,9 @@ from pathlib import Path
 import pytest
 
 CRATE = Path(__file__).resolve().parents[1]                       # witnesses/rdl-wasm
+WORKSPACE = CRATE.parent                                          # witnesses/ (cargo workspace)
 REPO = CRATE.parents[1]                                            # repo root
-WASM = CRATE / "target" / "wasm32v1-none" / "release" / "rdl_wasm.wasm"
+WASM = WORKSPACE / "target" / "wasm32v1-none" / "release" / "rdl_wasm.wasm"
 CARGO_BIN = Path.home() / ".cargo" / "bin"
 
 
@@ -34,7 +35,7 @@ pytestmark = pytest.mark.skipif(
 @pytest.fixture(scope="module")
 def wasm():
     r = subprocess.run([CARGO, "build", "--release", "--target", "wasm32v1-none"],
-                       cwd=CRATE, env=ENV, capture_output=True, text=True)
+                       cwd=WORKSPACE, env=ENV, capture_output=True, text=True)
     assert r.returncode == 0, r.stderr
     assert WASM.is_file()
     return WASM

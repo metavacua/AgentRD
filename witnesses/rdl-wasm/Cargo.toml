@@ -11,8 +11,4 @@ libm = "0.2"   # pure no_std software math (sqrt); adds no host imports — the 
 [lib]
 crate-type = ["cdylib", "rlib"]
 
-[profile.release]
-opt-level = "s"
-lto = true
-panic = "abort"
-strip = true
+# [profile.release] lives at the workspace root (witnesses/Cargo.toml).

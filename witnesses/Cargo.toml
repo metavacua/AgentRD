@@ -1,0 +1,12 @@
+# Cargo workspace for the RDL witnesses. The abstract RDL interface may have multiple
+# concrete witnesses (rust/wasm32v1-none, ...); each is a workspace member. Action A of
+# the rust/wasm/hexagonal RDL is compiling THIS workspace to the wasm32v1-none target.
+[workspace]
+resolver = "2"
+members = ["rdl-wasm"]
+
+[profile.release]
+opt-level = "s"
+lto = true
+panic = "abort"
+strip = true

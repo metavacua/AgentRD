@@ -12,8 +12,9 @@ import shutil
 import subprocess
 from pathlib import Path
 
-CRATE = Path(__file__).resolve().parents[1]
-WASM = CRATE / "target" / "wasm32v1-none" / "release" / "rdl_wasm.wasm"
+CRATE = Path(__file__).resolve().parents[1]          # witnesses/rdl-wasm
+WORKSPACE = CRATE.parent                             # witnesses/ (cargo workspace)
+WASM = WORKSPACE / "target" / "wasm32v1-none" / "release" / "rdl_wasm.wasm"
 CARGO_BIN = Path.home() / ".cargo" / "bin"
 
 
@@ -33,7 +34,7 @@ def available() -> bool:
 def build() -> None:
     if not WASM.is_file():
         subprocess.run([CARGO, "build", "--release", "--target", "wasm32v1-none"],
-                       cwd=CRATE, env=_ENV, check=True, capture_output=True)
+                       cwd=WORKSPACE, env=_ENV, check=True, capture_output=True)
 
 
 def _invoke(fn: str, *args) -> str:
