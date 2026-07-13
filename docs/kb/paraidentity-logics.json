@@ -20,7 +20,10 @@
     {"id": "nicolaiRossi", "type": "Publication", "label": "Systems for Non-Reflexive Consequence", "creator": ["Nicolai", "Rossi"], "identifier": "Studia Logica; doi:10.1007/s11225-023-10049-2", "status": "verified", "source": "https://link.springer.com/article/10.1007/s11225-023-10049-2"},
     {"id": "frenchReflexivity", "type": "Publication", "label": "Structural Reflexivity and the Paradoxes of Self-Reference", "creator": ["French"], "identifier": "Ergo", "status": "verified", "source": "https://quod.lib.umich.edu/e/ergo/12405314.0003.005"},
     {"id": "ccmLFI", "type": "Publication", "label": "Logics of Formal Inconsistency", "creator": ["Carnielli", "Coniglio", "Marcos"], "identifier": "Handbook of Philosophical Logic", "status": "verified", "source": "https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=7746fe65efb386f6226c9116145b1495b7b79d15"},
-    {"id": "carnielliRodrigues2019", "type": "Publication", "label": "An epistemic approach to paraconsistency: a logic of evidence and truth", "creator": ["Carnielli", "Rodrigues"], "date": "2019", "identifier": "Synthese 196:3789-3813", "status": "verified", "source": "https://www.researchgate.net/publication/321024784"},
+    {"id": "carnielliRodrigues2019", "type": "Publication", "label": "An epistemic approach to paraconsistency: a logic of evidence and truth", "creator": ["Carnielli", "Rodrigues"], "date": "2019", "identifier": "Synthese; doi:10.1007/s11229-017-1621-7 (online 2017)", "status": "verified", "source": "https://doi.org/10.1007/s11229-017-1621-7", "note": "Anti-dialetheist: a contradiction A/¬A expresses conflicting non-conclusive EVIDENCE (reasons to believe A true), strictly weaker than truth; the consequence relation trivializes under any TRUE contradiction. Verified 3-0."},
+    {"id": "arenhart2020", "type": "Publication", "label": "The evidence approach to paraconsistency versus the paraconsistent approach to evidence", "creator": ["Arenhart"], "date": "2020", "identifier": "Synthese 198(12):11537-11559; doi:10.1007/s11229-020-02813-x", "status": "verified", "source": "https://doi.org/10.1007/s11229-020-02813-x"},
+    {"id": "antunesAxioms2020", "type": "Publication", "label": "Kripke-Style Models for Logics of Evidence and Truth", "creator": ["Antunes", "Carnielli", "Kapsner", "Rodrigues"], "date": "2020", "identifier": "Axioms 9(3):100; doi:10.3390/axioms9030100", "status": "verified", "source": "https://doi.org/10.3390/axioms9030100"},
+    {"id": "antunesJPL2022", "type": "Publication", "label": "Valuation semantics for first-order logics of evidence and truth", "creator": ["Antunes", "Rodrigues", "Carnielli", "Coniglio"], "date": "2022", "identifier": "J. Philosophical Logic; arXiv:2106.09850; doi:10.1007/s10992-022-09662-8", "status": "verified", "source": "https://arxiv.org/abs/2106.09850"},
     {"id": "carnielliRecovery", "type": "Publication", "label": "Recovery operators, paraconsistency and duality", "creator": ["Carnielli", "Coniglio", "Rodrigues"], "status": "verified", "source": "https://philarchive.org/archive/CARROP-9", "note": "Introduces mbC (LFI) / mbD (LFU) / mbCD / mbCDE duality."},
     {"id": "marcosParanormal", "type": "Publication", "label": "Nearly every normal modal logic is paranormal", "creator": ["Marcos"], "identifier": "Logique et Analyse", "status": "verified", "source": "https://philpapers.org/rec/MARNEN"},
     {"id": "dallaChiaraGiuntini1989", "type": "Publication", "label": "Paraconsistent quantum logics", "creator": ["Dalla Chiara", "Giuntini"], "date": "1989", "identifier": "Foundations of Physics", "status": "verified", "source": "https://iep.utm.edu/qu-logic/"},
@@ -42,11 +45,16 @@
 
     {"id": "paraconsistent", "type": "Logic", "label": "Paraconsistent logic", "status": "verified"},
     {"id": "paracomplete", "type": "Logic", "label": "Paracomplete logic", "status": "verified"},
-    {"id": "paranormal", "type": "Logic", "label": "Paranormal logic (paraconsistent AND paracomplete)", "status": "verified", "witnessedBy": ["marcosParanormal"]},
+    {"id": "paranormal", "type": "Logic", "label": "Paranormal logic (paraconsistent AND paracomplete)", "status": "verified", "witnessedBy": ["marcosParanormal"], "note": "The PROPERTY (paraconsistent AND paracomplete) is verified 3-0; but the primary source COINING the term 'paranormal' was not pinned by adversarial verification (source papers say 'paraconsistent and paracomplete' / 'paradefinite' / 'non-alethic'). marcosParanormal uses the term; coinage attribution unconfirmed."},
     {"id": "LFI", "type": "Logic", "label": "Logic of Formal Inconsistency", "status": "verified", "witnessedBy": ["ccmLFI"]},
     {"id": "LFU", "type": "Logic", "label": "Logic of Formal Undeterminedness", "status": "verified", "witnessedBy": ["carnielliRecovery"]},
     {"id": "mbCDE", "type": "Logic", "label": "mbCDE (paranormal LFI+LFU)", "status": "verified", "witnessedBy": ["carnielliRecovery"]},
-    {"id": "LET", "type": "Logic", "label": "Logic of Evidence and Truth", "status": "verified", "witnessedBy": ["carnielliRodrigues2019"]},
+    {"id": "LET", "type": "Logic", "label": "Logic of Evidence and Truth (umbrella; LET_J, LET_F)", "status": "verified", "witnessedBy": ["carnielliRodrigues2019"]},
+    {"id": "LET_J", "type": "Logic", "label": "LET_J (extends BLE / Nelson's N4 with classicality operator)", "status": "verified", "witnessedBy": ["carnielliRodrigues2019", "antunesJPL2022"]},
+    {"id": "LET_F", "type": "Logic", "label": "LET_F (extends FDE with dual operators o and *)", "status": "verified", "witnessedBy": ["antunesAxioms2020"]},
+    {"id": "BLE", "type": "Logic", "label": "Basic Logic of Evidence (paraconsistent AND paracomplete natural-deduction base)", "status": "verified", "witnessedBy": ["carnielliRodrigues2019"]},
+    {"id": "FDE", "type": "Logic", "label": "First-Degree Entailment / Belnap-Dunn four-valued logic (values: T, F, both=glut, neither=gap)", "status": "verified", "witnessedBy": ["antunesAxioms2020"]},
+    {"id": "N4", "type": "Logic", "label": "Nelson's paraconsistent logic N4", "status": "verified", "witnessedBy": ["carnielliRodrigues2019"]},
     {"id": "nonReflexiveIdentity", "type": "Logic", "label": "Non-reflexive logic (identity a=a fails) / Schrodinger logic", "status": "verified", "witnessedBy": ["dacostaKrause1994", "nrlFoundPhys2015"]},
     {"id": "nonReflexiveConsequence", "type": "Logic", "label": "Non-reflexive consequence (A|-A fails)", "status": "verified", "witnessedBy": ["nicolaiRossi", "frenchReflexivity"]},
     {"id": "basicLogic", "type": "Logic", "label": "Basic Logic (Sambin) — maximally substructural core, reflection principle", "creator": ["Sambin"], "status": "verified", "note": "Connectives introduced by reflecting metalinguistic links; strict control of structural rules."},
@@ -64,7 +72,12 @@
     {"id": "paraidentityCluster", "type": "Cluster", "label": "Paraidentity / parareflexive logics (curator's organizing cluster)", "status": "user-asserted", "note": "NOT an established literature term (searched; 'non-reflexive' is standard). The curator's cluster gathering the identity/reflexivity-failing logics tied to quantum no-go theorems, with unpublished results only partially visible from the cited sources."},
 
     {"id": "quantumIndistinguishability", "type": "Concept", "label": "Quantum indistinguishability / non-individuality of particles", "status": "verified"},
-    {"id": "selfReference", "type": "Concept", "label": "Self-reference / semantic closure / truth predicate", "status": "verified"}
+    {"id": "selfReference", "type": "Concept", "label": "Self-reference / semantic closure / truth predicate", "status": "verified"},
+    {"id": "evidence", "type": "Concept", "label": "Non-conclusive evidence (may be lacking = gap-like, or conflicting = glut-like); weaker than truth", "status": "verified"},
+    {"id": "classicalityOperator", "type": "Principle", "label": "Classicality operator o (dual non-classicality *); oA = A behaves classically / conclusive evidence", "status": "verified", "witnessedBy": ["carnielliRodrigues2019"]},
+    {"id": "gentleExplosion", "type": "Principle", "label": "Gentle explosion: oA, A, not-A |- B  while  A, not-A |/- B (the LFI mechanism; Derivability Adjustment Theorem)", "status": "verified", "witnessedBy": ["ccmLFI"]},
+    {"id": "dialetheism", "type": "Concept", "label": "Dialetheism (Priest): some contradictions are TRUE", "status": "verified"},
+    {"id": "antiDialetheism", "type": "Concept", "label": "Anti-dialetheism: contradictions are conflicting evidence, never true (the LET stance)", "status": "verified", "witnessedBy": ["carnielliRodrigues2019", "arenhart2020"]}
   ],
   "edges": [
     {"s": "paraconsistent", "p": "plog:rejects", "o": "explosion", "status": "verified"},
@@ -115,6 +128,21 @@
     {"s": "paraidentityCluster", "p": "skos:member", "o": "kochenSpecker", "status": "user-asserted"},
     {"s": "paraidentityCluster", "p": "plog:relatedTo", "o": "refutational", "status": "user-asserted"},
     {"s": "paraidentityCluster", "p": "plog:relatedTo", "o": "nonMonotonic", "status": "user-hypothesis"},
-    {"s": "paraidentityCluster", "p": "plog:witnessedBy", "o": "zizzi2010", "status": "user-asserted", "note": "triple (paraconsistent∧paracomplete∧non-reflexive)+no-go tie located in Zizzi 2010 + surrounding papers per curator; source verified to exist, exact statement not extracted"}
+    {"s": "paraidentityCluster", "p": "plog:witnessedBy", "o": "zizzi2010", "status": "user-asserted", "note": "triple (paraconsistent∧paracomplete∧non-reflexive)+no-go tie located in Zizzi 2010 + surrounding papers per curator; source verified to exist, exact statement not extracted"},
+
+    {"s": "LET_J", "p": "plog:extends", "o": "BLE", "status": "verified", "source": "https://doi.org/10.1007/s11229-017-1621-7"},
+    {"s": "BLE", "p": "plog:relatedTo", "o": "N4", "status": "verified", "note": "BLE equivalent to Nelson's N4"},
+    {"s": "LET_F", "p": "plog:extends", "o": "FDE", "status": "verified", "source": "https://doi.org/10.3390/axioms9030100"},
+    {"s": "BLE", "p": "plog:isA", "o": "paranormal", "status": "verified"},
+    {"s": "FDE", "p": "plog:isA", "o": "paranormal", "status": "verified"},
+    {"s": "LET_J", "p": "plog:isA", "o": "paranormal", "status": "verified"},
+    {"s": "LET_F", "p": "plog:isA", "o": "paranormal", "status": "verified"},
+    {"s": "LET_J", "p": "skos:broader", "o": "LET", "status": "verified"},
+    {"s": "LET_F", "p": "skos:broader", "o": "LET", "status": "verified"},
+    {"s": "LET", "p": "plog:formalizes", "o": "evidence", "status": "verified"},
+    {"s": "LET_F", "p": "plog:uses", "o": "classicalityOperator", "status": "verified"},
+    {"s": "LFI", "p": "plog:uses", "o": "gentleExplosion", "status": "verified", "source": "https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=7746fe65efb386f6226c9116145b1495b7b79d15"},
+    {"s": "LET", "p": "plog:adopts", "o": "antiDialetheism", "status": "verified"},
+    {"s": "antiDialetheism", "p": "plog:opposes", "o": "dialetheism", "status": "verified"}
   ]
 }

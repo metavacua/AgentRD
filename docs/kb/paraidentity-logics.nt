@@ -51,11 +51,39 @@
 <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
 <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://www.w3.org/2004/02/skos/core#prefLabel> "An epistemic approach to paraconsistency: a logic of evidence and truth" .
 <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
-<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/source> <https://www.researchgate.net/publication/321024784> .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/source> <https://doi.org/10.1007/s11229-017-1621-7> .
 <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/date> "2019" .
-<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/identifier> "Synthese 196:3789-3813" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/identifier> "Synthese; doi:10.1007/s11229-017-1621-7 (online 2017)" .
 <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/creator> "Carnielli" .
 <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/creator> "Rodrigues" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://www.w3.org/2004/02/skos/core#note> "Anti-dialetheist: a contradiction A/¬A expresses conflicting non-conclusive EVIDENCE (reasons to believe A true), strictly weaker than truth; the consequence relation trivializes under any TRUE contradiction. Verified 3-0." .
+<https://github.com/metavacua/AgentRD/paralogic#arenhart2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#arenhart2020> <http://www.w3.org/2004/02/skos/core#prefLabel> "The evidence approach to paraconsistency versus the paraconsistent approach to evidence" .
+<https://github.com/metavacua/AgentRD/paralogic#arenhart2020> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#arenhart2020> <http://purl.org/dc/terms/source> <https://doi.org/10.1007/s11229-020-02813-x> .
+<https://github.com/metavacua/AgentRD/paralogic#arenhart2020> <http://purl.org/dc/terms/date> "2020" .
+<https://github.com/metavacua/AgentRD/paralogic#arenhart2020> <http://purl.org/dc/terms/identifier> "Synthese 198(12):11537-11559; doi:10.1007/s11229-020-02813-x" .
+<https://github.com/metavacua/AgentRD/paralogic#arenhart2020> <http://purl.org/dc/terms/creator> "Arenhart" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kripke-Style Models for Logics of Evidence and Truth" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> <http://purl.org/dc/terms/source> <https://doi.org/10.3390/axioms9030100> .
+<https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> <http://purl.org/dc/terms/date> "2020" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> <http://purl.org/dc/terms/identifier> "Axioms 9(3):100; doi:10.3390/axioms9030100" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> <http://purl.org/dc/terms/creator> "Antunes" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> <http://purl.org/dc/terms/creator> "Carnielli" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> <http://purl.org/dc/terms/creator> "Kapsner" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> <http://purl.org/dc/terms/creator> "Rodrigues" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesJPL2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#antunesJPL2022> <http://www.w3.org/2004/02/skos/core#prefLabel> "Valuation semantics for first-order logics of evidence and truth" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesJPL2022> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesJPL2022> <http://purl.org/dc/terms/source> <https://arxiv.org/abs/2106.09850> .
+<https://github.com/metavacua/AgentRD/paralogic#antunesJPL2022> <http://purl.org/dc/terms/date> "2022" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesJPL2022> <http://purl.org/dc/terms/identifier> "J. Philosophical Logic; arXiv:2106.09850; doi:10.1007/s10992-022-09662-8" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesJPL2022> <http://purl.org/dc/terms/creator> "Antunes" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesJPL2022> <http://purl.org/dc/terms/creator> "Rodrigues" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesJPL2022> <http://purl.org/dc/terms/creator> "Carnielli" .
+<https://github.com/metavacua/AgentRD/paralogic#antunesJPL2022> <http://purl.org/dc/terms/creator> "Coniglio" .
 <https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
 <https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recovery operators, paraconsistency and duality" .
 <https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
@@ -139,6 +167,7 @@
 <https://github.com/metavacua/AgentRD/paralogic#paranormal> <http://www.w3.org/2004/02/skos/core#prefLabel> "Paranormal logic (paraconsistent AND paracomplete)" .
 <https://github.com/metavacua/AgentRD/paralogic#paranormal> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
 <https://github.com/metavacua/AgentRD/paralogic#paranormal> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#marcosParanormal> .
+<https://github.com/metavacua/AgentRD/paralogic#paranormal> <http://www.w3.org/2004/02/skos/core#note> "The PROPERTY (paraconsistent AND paracomplete) is verified 3-0; but the primary source COINING the term 'paranormal' was not pinned by adversarial verification (source papers say 'paraconsistent and paracomplete' / 'paradefinite' / 'non-alethic'). marcosParanormal uses the term; coinage attribution unconfirmed." .
 <https://github.com/metavacua/AgentRD/paralogic#LFI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
 <https://github.com/metavacua/AgentRD/paralogic#LFI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Logic of Formal Inconsistency" .
 <https://github.com/metavacua/AgentRD/paralogic#LFI> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
@@ -152,9 +181,30 @@
 <https://github.com/metavacua/AgentRD/paralogic#mbCDE> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
 <https://github.com/metavacua/AgentRD/paralogic#mbCDE> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> .
 <https://github.com/metavacua/AgentRD/paralogic#LET> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
-<https://github.com/metavacua/AgentRD/paralogic#LET> <http://www.w3.org/2004/02/skos/core#prefLabel> "Logic of Evidence and Truth" .
+<https://github.com/metavacua/AgentRD/paralogic#LET> <http://www.w3.org/2004/02/skos/core#prefLabel> "Logic of Evidence and Truth (umbrella; LET_J, LET_F)" .
 <https://github.com/metavacua/AgentRD/paralogic#LET> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
 <https://github.com/metavacua/AgentRD/paralogic#LET> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_J> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_J> <http://www.w3.org/2004/02/skos/core#prefLabel> "LET_J (extends BLE / Nelson's N4 with classicality operator)" .
+<https://github.com/metavacua/AgentRD/paralogic#LET_J> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#LET_J> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_J> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#antunesJPL2022> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_F> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_F> <http://www.w3.org/2004/02/skos/core#prefLabel> "LET_F (extends FDE with dual operators o and *)" .
+<https://github.com/metavacua/AgentRD/paralogic#LET_F> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#LET_F> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> .
+<https://github.com/metavacua/AgentRD/paralogic#BLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#BLE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Basic Logic of Evidence (paraconsistent AND paracomplete natural-deduction base)" .
+<https://github.com/metavacua/AgentRD/paralogic#BLE> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#BLE> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> .
+<https://github.com/metavacua/AgentRD/paralogic#FDE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#FDE> <http://www.w3.org/2004/02/skos/core#prefLabel> "First-Degree Entailment / Belnap-Dunn four-valued logic (values: T, F, both=glut, neither=gap)" .
+<https://github.com/metavacua/AgentRD/paralogic#FDE> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#FDE> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#antunesAxioms2020> .
+<https://github.com/metavacua/AgentRD/paralogic#N4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#N4> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nelson's paraconsistent logic N4" .
+<https://github.com/metavacua/AgentRD/paralogic#N4> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#N4> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> .
 <https://github.com/metavacua/AgentRD/paralogic#nonReflexiveIdentity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
 <https://github.com/metavacua/AgentRD/paralogic#nonReflexiveIdentity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non-reflexive logic (identity a=a fails) / Schrodinger logic" .
 <https://github.com/metavacua/AgentRD/paralogic#nonReflexiveIdentity> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
@@ -222,6 +272,25 @@
 <https://github.com/metavacua/AgentRD/paralogic#selfReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Concept> .
 <https://github.com/metavacua/AgentRD/paralogic#selfReference> <http://www.w3.org/2004/02/skos/core#prefLabel> "Self-reference / semantic closure / truth predicate" .
 <https://github.com/metavacua/AgentRD/paralogic#selfReference> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Concept> .
+<https://github.com/metavacua/AgentRD/paralogic#evidence> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non-conclusive evidence (may be lacking = gap-like, or conflicting = glut-like); weaker than truth" .
+<https://github.com/metavacua/AgentRD/paralogic#evidence> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#classicalityOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Principle> .
+<https://github.com/metavacua/AgentRD/paralogic#classicalityOperator> <http://www.w3.org/2004/02/skos/core#prefLabel> "Classicality operator o (dual non-classicality *); oA = A behaves classically / conclusive evidence" .
+<https://github.com/metavacua/AgentRD/paralogic#classicalityOperator> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#classicalityOperator> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> .
+<https://github.com/metavacua/AgentRD/paralogic#gentleExplosion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Principle> .
+<https://github.com/metavacua/AgentRD/paralogic#gentleExplosion> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gentle explosion: oA, A, not-A |- B  while  A, not-A |/- B (the LFI mechanism; Derivability Adjustment Theorem)" .
+<https://github.com/metavacua/AgentRD/paralogic#gentleExplosion> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#gentleExplosion> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#ccmLFI> .
+<https://github.com/metavacua/AgentRD/paralogic#dialetheism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Concept> .
+<https://github.com/metavacua/AgentRD/paralogic#dialetheism> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dialetheism (Priest): some contradictions are TRUE" .
+<https://github.com/metavacua/AgentRD/paralogic#dialetheism> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#antiDialetheism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Concept> .
+<https://github.com/metavacua/AgentRD/paralogic#antiDialetheism> <http://www.w3.org/2004/02/skos/core#prefLabel> "Anti-dialetheism: contradictions are conflicting evidence, never true (the LET stance)" .
+<https://github.com/metavacua/AgentRD/paralogic#antiDialetheism> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#antiDialetheism> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> .
+<https://github.com/metavacua/AgentRD/paralogic#antiDialetheism> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#arenhart2020> .
 <https://github.com/metavacua/AgentRD/paralogic#paraconsistent> <https://github.com/metavacua/AgentRD/paralogic#rejects> <https://github.com/metavacua/AgentRD/paralogic#explosion> .
 <https://github.com/metavacua/AgentRD/paralogic#paracomplete> <https://github.com/metavacua/AgentRD/paralogic#rejects> <https://github.com/metavacua/AgentRD/paralogic#excludedMiddle> .
 <https://github.com/metavacua/AgentRD/paralogic#paranormal> <https://github.com/metavacua/AgentRD/paralogic#combines> <https://github.com/metavacua/AgentRD/paralogic#paraconsistent> .
@@ -264,3 +333,17 @@
 <https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <https://github.com/metavacua/AgentRD/paralogic#relatedTo> <https://github.com/metavacua/AgentRD/paralogic#refutational> .
 <https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <https://github.com/metavacua/AgentRD/paralogic#relatedTo> <https://github.com/metavacua/AgentRD/paralogic#nonMonotonic> .
 <https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#zizzi2010> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_J> <https://github.com/metavacua/AgentRD/paralogic#extends> <https://github.com/metavacua/AgentRD/paralogic#BLE> .
+<https://github.com/metavacua/AgentRD/paralogic#BLE> <https://github.com/metavacua/AgentRD/paralogic#relatedTo> <https://github.com/metavacua/AgentRD/paralogic#N4> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_F> <https://github.com/metavacua/AgentRD/paralogic#extends> <https://github.com/metavacua/AgentRD/paralogic#FDE> .
+<https://github.com/metavacua/AgentRD/paralogic#BLE> <https://github.com/metavacua/AgentRD/paralogic#isA> <https://github.com/metavacua/AgentRD/paralogic#paranormal> .
+<https://github.com/metavacua/AgentRD/paralogic#FDE> <https://github.com/metavacua/AgentRD/paralogic#isA> <https://github.com/metavacua/AgentRD/paralogic#paranormal> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_J> <https://github.com/metavacua/AgentRD/paralogic#isA> <https://github.com/metavacua/AgentRD/paralogic#paranormal> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_F> <https://github.com/metavacua/AgentRD/paralogic#isA> <https://github.com/metavacua/AgentRD/paralogic#paranormal> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_J> <http://www.w3.org/2004/02/skos/core#broader> <https://github.com/metavacua/AgentRD/paralogic#LET> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_F> <http://www.w3.org/2004/02/skos/core#broader> <https://github.com/metavacua/AgentRD/paralogic#LET> .
+<https://github.com/metavacua/AgentRD/paralogic#LET> <https://github.com/metavacua/AgentRD/paralogic#formalizes> <https://github.com/metavacua/AgentRD/paralogic#evidence> .
+<https://github.com/metavacua/AgentRD/paralogic#LET_F> <https://github.com/metavacua/AgentRD/paralogic#uses> <https://github.com/metavacua/AgentRD/paralogic#classicalityOperator> .
+<https://github.com/metavacua/AgentRD/paralogic#LFI> <https://github.com/metavacua/AgentRD/paralogic#uses> <https://github.com/metavacua/AgentRD/paralogic#gentleExplosion> .
+<https://github.com/metavacua/AgentRD/paralogic#LET> <https://github.com/metavacua/AgentRD/paralogic#adopts> <https://github.com/metavacua/AgentRD/paralogic#antiDialetheism> .
+<https://github.com/metavacua/AgentRD/paralogic#antiDialetheism> <https://github.com/metavacua/AgentRD/paralogic#opposes> <https://github.com/metavacua/AgentRD/paralogic#dialetheism> .

@@ -57,11 +57,39 @@ plog:ccmLFI dcterms:creator "Marcos" .
 plog:carnielliRodrigues2019 rdf:type plog:Publication .
 plog:carnielliRodrigues2019 skos:prefLabel "An epistemic approach to paraconsistency: a logic of evidence and truth" .
 plog:carnielliRodrigues2019 plog:status "verified" .
-plog:carnielliRodrigues2019 dcterms:source <https://www.researchgate.net/publication/321024784> .
+plog:carnielliRodrigues2019 dcterms:source <https://doi.org/10.1007/s11229-017-1621-7> .
 plog:carnielliRodrigues2019 dcterms:date "2019" .
-plog:carnielliRodrigues2019 dcterms:identifier "Synthese 196:3789-3813" .
+plog:carnielliRodrigues2019 dcterms:identifier "Synthese; doi:10.1007/s11229-017-1621-7 (online 2017)" .
 plog:carnielliRodrigues2019 dcterms:creator "Carnielli" .
 plog:carnielliRodrigues2019 dcterms:creator "Rodrigues" .
+plog:carnielliRodrigues2019 skos:note "Anti-dialetheist: a contradiction A/¬A expresses conflicting non-conclusive EVIDENCE (reasons to believe A true), strictly weaker than truth; the consequence relation trivializes under any TRUE contradiction. Verified 3-0." .
+plog:arenhart2020 rdf:type plog:Publication .
+plog:arenhart2020 skos:prefLabel "The evidence approach to paraconsistency versus the paraconsistent approach to evidence" .
+plog:arenhart2020 plog:status "verified" .
+plog:arenhart2020 dcterms:source <https://doi.org/10.1007/s11229-020-02813-x> .
+plog:arenhart2020 dcterms:date "2020" .
+plog:arenhart2020 dcterms:identifier "Synthese 198(12):11537-11559; doi:10.1007/s11229-020-02813-x" .
+plog:arenhart2020 dcterms:creator "Arenhart" .
+plog:antunesAxioms2020 rdf:type plog:Publication .
+plog:antunesAxioms2020 skos:prefLabel "Kripke-Style Models for Logics of Evidence and Truth" .
+plog:antunesAxioms2020 plog:status "verified" .
+plog:antunesAxioms2020 dcterms:source <https://doi.org/10.3390/axioms9030100> .
+plog:antunesAxioms2020 dcterms:date "2020" .
+plog:antunesAxioms2020 dcterms:identifier "Axioms 9(3):100; doi:10.3390/axioms9030100" .
+plog:antunesAxioms2020 dcterms:creator "Antunes" .
+plog:antunesAxioms2020 dcterms:creator "Carnielli" .
+plog:antunesAxioms2020 dcterms:creator "Kapsner" .
+plog:antunesAxioms2020 dcterms:creator "Rodrigues" .
+plog:antunesJPL2022 rdf:type plog:Publication .
+plog:antunesJPL2022 skos:prefLabel "Valuation semantics for first-order logics of evidence and truth" .
+plog:antunesJPL2022 plog:status "verified" .
+plog:antunesJPL2022 dcterms:source <https://arxiv.org/abs/2106.09850> .
+plog:antunesJPL2022 dcterms:date "2022" .
+plog:antunesJPL2022 dcterms:identifier "J. Philosophical Logic; arXiv:2106.09850; doi:10.1007/s10992-022-09662-8" .
+plog:antunesJPL2022 dcterms:creator "Antunes" .
+plog:antunesJPL2022 dcterms:creator "Rodrigues" .
+plog:antunesJPL2022 dcterms:creator "Carnielli" .
+plog:antunesJPL2022 dcterms:creator "Coniglio" .
 plog:carnielliRecovery rdf:type plog:Publication .
 plog:carnielliRecovery skos:prefLabel "Recovery operators, paraconsistency and duality" .
 plog:carnielliRecovery plog:status "verified" .
@@ -145,6 +173,7 @@ plog:paranormal rdf:type plog:Logic .
 plog:paranormal skos:prefLabel "Paranormal logic (paraconsistent AND paracomplete)" .
 plog:paranormal plog:status "verified" .
 plog:paranormal plog:witnessedBy plog:marcosParanormal .
+plog:paranormal skos:note "The PROPERTY (paraconsistent AND paracomplete) is verified 3-0; but the primary source COINING the term 'paranormal' was not pinned by adversarial verification (source papers say 'paraconsistent and paracomplete' / 'paradefinite' / 'non-alethic'). marcosParanormal uses the term; coinage attribution unconfirmed." .
 plog:LFI rdf:type plog:Logic .
 plog:LFI skos:prefLabel "Logic of Formal Inconsistency" .
 plog:LFI plog:status "verified" .
@@ -158,9 +187,30 @@ plog:mbCDE skos:prefLabel "mbCDE (paranormal LFI+LFU)" .
 plog:mbCDE plog:status "verified" .
 plog:mbCDE plog:witnessedBy plog:carnielliRecovery .
 plog:LET rdf:type plog:Logic .
-plog:LET skos:prefLabel "Logic of Evidence and Truth" .
+plog:LET skos:prefLabel "Logic of Evidence and Truth (umbrella; LET_J, LET_F)" .
 plog:LET plog:status "verified" .
 plog:LET plog:witnessedBy plog:carnielliRodrigues2019 .
+plog:LET_J rdf:type plog:Logic .
+plog:LET_J skos:prefLabel "LET_J (extends BLE / Nelson's N4 with classicality operator)" .
+plog:LET_J plog:status "verified" .
+plog:LET_J plog:witnessedBy plog:carnielliRodrigues2019 .
+plog:LET_J plog:witnessedBy plog:antunesJPL2022 .
+plog:LET_F rdf:type plog:Logic .
+plog:LET_F skos:prefLabel "LET_F (extends FDE with dual operators o and *)" .
+plog:LET_F plog:status "verified" .
+plog:LET_F plog:witnessedBy plog:antunesAxioms2020 .
+plog:BLE rdf:type plog:Logic .
+plog:BLE skos:prefLabel "Basic Logic of Evidence (paraconsistent AND paracomplete natural-deduction base)" .
+plog:BLE plog:status "verified" .
+plog:BLE plog:witnessedBy plog:carnielliRodrigues2019 .
+plog:FDE rdf:type plog:Logic .
+plog:FDE skos:prefLabel "First-Degree Entailment / Belnap-Dunn four-valued logic (values: T, F, both=glut, neither=gap)" .
+plog:FDE plog:status "verified" .
+plog:FDE plog:witnessedBy plog:antunesAxioms2020 .
+plog:N4 rdf:type plog:Logic .
+plog:N4 skos:prefLabel "Nelson's paraconsistent logic N4" .
+plog:N4 plog:status "verified" .
+plog:N4 plog:witnessedBy plog:carnielliRodrigues2019 .
 plog:nonReflexiveIdentity rdf:type plog:Logic .
 plog:nonReflexiveIdentity skos:prefLabel "Non-reflexive logic (identity a=a fails) / Schrodinger logic" .
 plog:nonReflexiveIdentity plog:status "verified" .
@@ -228,6 +278,25 @@ plog:quantumIndistinguishability plog:status "verified" .
 plog:selfReference rdf:type plog:Concept .
 plog:selfReference skos:prefLabel "Self-reference / semantic closure / truth predicate" .
 plog:selfReference plog:status "verified" .
+plog:evidence rdf:type plog:Concept .
+plog:evidence skos:prefLabel "Non-conclusive evidence (may be lacking = gap-like, or conflicting = glut-like); weaker than truth" .
+plog:evidence plog:status "verified" .
+plog:classicalityOperator rdf:type plog:Principle .
+plog:classicalityOperator skos:prefLabel "Classicality operator o (dual non-classicality *); oA = A behaves classically / conclusive evidence" .
+plog:classicalityOperator plog:status "verified" .
+plog:classicalityOperator plog:witnessedBy plog:carnielliRodrigues2019 .
+plog:gentleExplosion rdf:type plog:Principle .
+plog:gentleExplosion skos:prefLabel "Gentle explosion: oA, A, not-A |- B  while  A, not-A |/- B (the LFI mechanism; Derivability Adjustment Theorem)" .
+plog:gentleExplosion plog:status "verified" .
+plog:gentleExplosion plog:witnessedBy plog:ccmLFI .
+plog:dialetheism rdf:type plog:Concept .
+plog:dialetheism skos:prefLabel "Dialetheism (Priest): some contradictions are TRUE" .
+plog:dialetheism plog:status "verified" .
+plog:antiDialetheism rdf:type plog:Concept .
+plog:antiDialetheism skos:prefLabel "Anti-dialetheism: contradictions are conflicting evidence, never true (the LET stance)" .
+plog:antiDialetheism plog:status "verified" .
+plog:antiDialetheism plog:witnessedBy plog:carnielliRodrigues2019 .
+plog:antiDialetheism plog:witnessedBy plog:arenhart2020 .
 plog:paraconsistent plog:rejects plog:explosion .
 plog:paracomplete plog:rejects plog:excludedMiddle .
 plog:paranormal plog:combines plog:paraconsistent .
@@ -270,3 +339,17 @@ plog:paraidentityCluster skos:member plog:kochenSpecker .
 plog:paraidentityCluster plog:relatedTo plog:refutational .
 plog:paraidentityCluster plog:relatedTo plog:nonMonotonic .
 plog:paraidentityCluster plog:witnessedBy plog:zizzi2010 .
+plog:LET_J plog:extends plog:BLE .
+plog:BLE plog:relatedTo plog:N4 .
+plog:LET_F plog:extends plog:FDE .
+plog:BLE plog:isA plog:paranormal .
+plog:FDE plog:isA plog:paranormal .
+plog:LET_J plog:isA plog:paranormal .
+plog:LET_F plog:isA plog:paranormal .
+plog:LET_J skos:broader plog:LET .
+plog:LET_F skos:broader plog:LET .
+plog:LET plog:formalizes plog:evidence .
+plog:LET_F plog:uses plog:classicalityOperator .
+plog:LFI plog:uses plog:gentleExplosion .
+plog:LET plog:adopts plog:antiDialetheism .
+plog:antiDialetheism plog:opposes plog:dialetheism .
