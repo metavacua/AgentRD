@@ -1,3 +1,5 @@
+> **Historical record (superseded).** This dated plan documents work completed *before* the `superpowers` decoupling of 2026-07-12. Its `superpowers` references are preserved as a record, not current guidance. Current design: `docs/plans/2026-07-12-decouple-rdl-from-superpowers.md`.
+
 # Plan 2 (D-B) — RDL Notation Subskills (`rdl-brainstorming`, `rdl-writing-plans`) — Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.

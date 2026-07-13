@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentskills.io/skill-frontmatter.schema.json",
+  "title": "Agent Skills SKILL.md frontmatter",
+  "description": "Declarative spec for the YAML frontmatter of a SKILL.md file, per the Agent Skills open format (agentskills.io, verified 2026-07-12). This is the industry-standard replacement for superpowers:writing-skills / skill-creator as the RDL Phase-5 skill-authoring gate. Enforced in code by scripts/lint_skill.py (stdlib-only, no jsonschema dependency).",
+  "type": "object",
+  "required": ["name", "description"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Unique kebab-case identifier. Must match evals.json skill_name.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 64
+    },
+    "description": {
+      "type": "string",
+      "description": "What the skill does AND when to use it. Drives progressive-disclosure triggering.",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "license": {
+      "type": "string",
+      "description": "Optional. Clarifies usage rights, e.g. Apache-2.0 or Source-available."
+    }
+  },
+  "additionalProperties": true
+}

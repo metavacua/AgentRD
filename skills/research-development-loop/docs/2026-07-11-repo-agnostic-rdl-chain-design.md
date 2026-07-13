@@ -1,3 +1,5 @@
+> **Historical record (superseded).** This dated artifact documents the chain *as designed on 2026-07-11*, before the `superpowers` decoupling of 2026-07-12. It intentionally references the then-current `superpowers` / `docs/superpowers` coupling and is preserved as a record, not current guidance. Current design: the skills' `SKILL.md` files + `docs/plans/2026-07-12-decouple-rdl-from-superpowers.md`.
+
 <!--
 Dublin Core / Schema.org metadata (chain-wide spine; Phase 5 scholarly-white-paper lifts this verbatim)
 dc:title        Repository- and Toolchain-Agnostic RDL Chain with Industry-Standard Spec Notation

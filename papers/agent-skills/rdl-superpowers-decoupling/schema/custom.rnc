@@ -1,0 +1,14 @@
+# RELAX NG Compact schema for this paper.
+#
+# Extends the DocBook 5.0 XInclude-aware grammar packaged by Debian's docbook5-xml
+# (DocBook 5.2's RNG is not distro-packaged; 5.0 is the validating baseline used here).
+# Including docbookxi.rnc makes `jing -c custom.rnc` a genuine RELAX NG *Compact*
+# validation of the whole document, satisfying the scholarly-white-paper contract.
+#
+# Finding sections carry role="finding" and a condition drawn from the controlled
+# vocabulary {confirmed, confirmed-with-caveats, split}. DocBook's `role` and
+# `condition` are open string attributes; the vocabulary is additionally checked by
+# the Makefile `validate` target (scripts-free grep), since constraining one value of
+# an open DocBook attribute is not expressible without redefining db.section.
+
+include "/usr/share/xml/docbook/schema/rng/5.0/docbookxi.rnc"

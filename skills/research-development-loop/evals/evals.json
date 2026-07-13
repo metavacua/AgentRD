@@ -21,7 +21,7 @@
         },
         {
           "name": "invokes-brainstorming-skill",
-          "description": "Phase 1 is entered by invoking superpowers:brainstorming, not by jumping directly to implementation"
+          "description": "Phase 1 is entered by invoking rdl-brainstorming, not by jumping directly to implementation"
         }
       ],
       "files": []
@@ -53,17 +53,17 @@
     },
     {
       "id": 3,
-      "eval_name": "anomaly-routes-to-systematic-debugging",
+      "eval_name": "anomaly-routes-to-root-cause-analysis",
       "prompt": "The smoke test passes but I'm seeing OOM kills in production. The coding-agent process gets killed after about 90 seconds under load. No test failure, just sudden death.",
-      "expected_output": "The skill should recognize this as a Phase 3/4 anomaly (OOM kill = resource exhaustion, which is on the anomaly list) and invoke superpowers:systematic-debugging before any fix attempt. It should NOT jump to proposing memory fixes or code changes. After systematic debugging, it should restart at Phase 0 Research.",
+      "expected_output": "The skill should recognize this as a Phase 3/4 anomaly (OOM kill = resource exhaustion, which is on the anomaly list) and run a Root-Cause Analysis (5 Whys / Ishikawa) plus a failing regression test before any fix attempt. It should NOT jump to proposing memory fixes or code changes. After the root cause is found, it should restart at Phase 0 Research.",
       "assertions": [
         {
           "name": "identifies-as-anomaly",
           "description": "The OOM kill is correctly classified as a Phase 3/4 anomaly (matches 'resource exhaustion' or 'process killed' on the anomaly list)"
         },
         {
-          "name": "invokes-systematic-debugging",
-          "description": "superpowers:systematic-debugging is invoked before any fix is proposed"
+          "name": "runs-root-cause-analysis",
+          "description": "A Root-Cause Analysis (5 Whys / Ishikawa) plus a failing regression test is run before any fix is proposed"
         },
         {
           "name": "no-premature-fix",
@@ -104,17 +104,17 @@
     },
     {
       "id": 5,
-      "eval_name": "permission-denied-triggers-systematic-debug",
+      "eval_name": "permission-denied-triggers-root-cause-analysis",
       "prompt": "During Phase 3 development, the coding agent tried to write a file to a read-only upstream repo (one outside [issues].write_repos) and received a 403 permission denied from the GitHub API. What should we do next?",
-      "expected_output": "The skill should identify the PermissionDenied as a systematic debugging trigger — it is an environmental constraint anomaly (the plan assumed access that doesn't exist). It should invoke superpowers:systematic-debugging before any fix is proposed, then restart at Phase 0 Research. It should NOT just say 'use a write-allowed repo instead' without systematic debugging.",
+      "expected_output": "The skill should identify the PermissionDenied as an anomaly trigger — it is an environmental constraint anomaly (the plan assumed access that doesn't exist). It should run a Root-Cause Analysis (5 Whys / Ishikawa) before any fix is proposed, then restart at Phase 0 Research. It should NOT just say 'use a write-allowed repo instead' without analyzing the root cause.",
       "assertions": [
         {
           "name": "identifies-as-anomaly",
-          "description": "The permission denied is correctly classified as a systematic debugging trigger (environmental constraint anomaly), not just a mistake to correct"
+          "description": "The permission denied is correctly classified as an anomaly trigger (environmental constraint anomaly), not just a mistake to correct"
         },
         {
-          "name": "invokes-systematic-debugging",
-          "description": "superpowers:systematic-debugging is invoked before any fix, redirect, or workaround is proposed"
+          "name": "runs-root-cause-analysis",
+          "description": "A Root-Cause Analysis (5 Whys / Ishikawa) is run before any fix, redirect, or workaround is proposed"
         },
         {
           "name": "no-premature-fix",

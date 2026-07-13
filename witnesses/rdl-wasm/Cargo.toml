@@ -1,0 +1,14 @@
+[package]
+name = "rdl-wasm"
+version = "0.1.0"
+edition = "2021"
+description = "A wasm32v1-none witness of the abstract RDL core: capability resolution, terminal classification, DOF invariant. Pure, no_std, zero ambient authority."
+license = "AGPL-3.0-or-later"
+
+[dependencies]
+libm = "0.2"   # pure no_std software math (sqrt); adds no host imports — the gate holds
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+# [profile.release] lives at the workspace root (witnesses/Cargo.toml).

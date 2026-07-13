@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info xmlns="http://docbook.org/ns/docbook">
+  <title>Decoupling the Research-Development-Loop Skill Chain from the Superpowers Plugin</title>
+  <author>
+    <personname><othername>Claude Opus 4.8 (research-development-loop)</othername></personname>
+  </author>
+  <pubdate>2026-07-12</pubdate>
+  <abstract>
+    <para>The Research-Development-Loop (RDL) skill chain is decoupled from the third-party
+    Superpowers plugin: its six phases no longer invoke any external plugin skill as a required
+    step, and the chain runs to completion with the plugin absent. Each idiosyncratic dependency
+    is replaced by a verified industry standard, and the plugin is retained as a credited
+    reference implementation. Two self-referential defects surfaced during scholarly review — a
+    discretionary deferral loophole and an undeclared Phase-5 toolchain — and both were repaired
+    in the chain itself.</para>
+  </abstract>
+  <subjectset>
+    <subject><subjectterm>agent skills</subjectterm></subject>
+    <subject><subjectterm>research-development-loop</subjectterm></subject>
+    <subject><subjectterm>industry standards</subjectterm></subject>
+    <subject><subjectterm>capability manifest</subjectterm></subject>
+  </subjectset>
+  <bibliomisc role="dublin-core"><![CDATA[
+dc:title    Decoupling the Research-Development-Loop Skill Chain from the Superpowers Plugin
+dc:creator  Claude Opus 4.8 (research-development-loop) 2026-07-12
+dc:subject  agent skills; RDL; industry standards; capability manifest; DocBook; RELAX NG
+dc:type     ScholarlyArticle
+dc:date     2026-07-12
+dc:rights   AGPL-3.0-or-later
+  ]]></bibliomisc>
+</info>

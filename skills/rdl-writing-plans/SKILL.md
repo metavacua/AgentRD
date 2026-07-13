@@ -1,13 +1,24 @@
 ---
 name: rdl-writing-plans
-description: RDL Phase 2 planning skill. Produces a TDD implementation plan from an rdl-brainstorming design doc, inheriting the superpowers writing-plans structure (bite-sized tasks, exact paths, Interfaces, no placeholders) and adding RFC 2119 Global Constraints and AC->task->test traceability.
+description: RDL Phase 2 planning skill. Produces a TDD implementation plan from an rdl-brainstorming design doc using a self-contained Work-Breakdown-Structure + Requirements-Traceability-Matrix template (bite-sized tasks, exact paths, Interfaces, no placeholders) and adding RFC 2119 Global Constraints and AC->task->test traceability.
 ---
 
 # RDL Writing Plans (Traceable TDD Plans)
 
-Follow the superpowers writing-plans *structure* verbatim (header; Global Constraints; Task N
-with Files/Interfaces; bite-sized checkbox steps: write failing test → run/fail → implement →
-run/pass → commit; no placeholders; self-review). This skill adds two things.
+Use this self-contained plan *structure* — a **Work-Breakdown Structure** whose leaves are
+TDD-driven tasks, each traced through a **Requirements Traceability Matrix** (ISO/IEC/IEEE 29148):
+
+- **Header** — title, date, manifest reference, source design doc.
+- **Global Constraints** — RFC 2119 (see Addition 1).
+- **Task N** — a **Files** list (exact paths, no placeholders) and an **Interfaces** block
+  (exact signatures/schemas the task must satisfy).
+- **Bite-sized checkbox steps** per task: write failing test → run/fail → implement → run/pass →
+  commit. No placeholders, no "TBD".
+- **Self-review** — check every task has a failing-test-first step and a real AC citation.
+
+(The Superpowers `superpowers:writing-plans` skill is a compatible reference implementation of
+this structure and MAY be used interchangeably where present; it is not required.) This skill
+adds two things.
 
 **Announce at start:** "Using rdl-writing-plans to produce a traceable TDD plan."
 

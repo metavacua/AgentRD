@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
-EVALS = Path("/home/metavacua/.claude/skills/rdl-brainstorming/evals/evals.json")
+from _paths import SKILLS_ROOT
+EVALS = SKILLS_ROOT / "rdl-brainstorming" / "evals" / "evals.json"
 
 def test_parses():
     json.loads(EVALS.read_text())

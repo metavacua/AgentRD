@@ -48,7 +48,7 @@ git log --oneline -15       # only if vcs="git"
 # iterating [issues].read_repos. Ungranted → logged skip.
 ```
 
-Read relevant specs (`docs/superpowers/specs/`) and plans (`docs/superpowers/plans/`).
+Read relevant specs (`{[project].docs_dir}/specs/`) and plans (`{[project].docs_dir}/plans/`).
 
 ## Step 0.4 — Check issue tracker
 

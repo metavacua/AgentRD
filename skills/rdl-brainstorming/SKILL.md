@@ -1,13 +1,24 @@
 ---
 name: rdl-brainstorming
-description: RDL Phase 1 design skill. Turns an idea into an industry-standard structured spec (Dublin Core + Schema.org metadata, RFC 2119 constraints, EARS acceptance criteria, Structurizr-DSL architecture model, MADR decisions, paraconsistent glut register) using a Rice-correct content-gated notation valve. Inherits the superpowers brainstorming process (one question at a time, 2-3 approaches, approval gates) and adds the notation layer to the output.
+description: RDL Phase 1 design skill. Turns an idea into an industry-standard structured spec (Dublin Core + Schema.org metadata, RFC 2119 constraints, EARS acceptance criteria, Structurizr-DSL architecture model, MADR decisions, paraconsistent glut register) using a Rice-correct content-gated notation valve. Runs a self-contained structured requirements-elicitation and design-review process (one question at a time, 2-3 approaches, approval gates) and adds the notation layer to the output.
 ---
 
 # RDL Brainstorming (Structured-Spec Design)
 
-Follow the superpowers brainstorming *process* verbatim (explore context; one question at a
-time; propose 2-3 approaches; present design sections with approval gates; spec self-review;
-user review gate). This skill only changes the *output format* of the design doc.
+Run this self-contained **structured requirements-elicitation and design-review** *process*
+(a standard elicitation + review-gate discipline; ISO/IEC/IEEE 29148 governs the resulting
+requirements). This skill changes the *output format* of the design doc; the process is:
+
+1. **Explore context** — read the residual and relevant code before proposing anything.
+2. **One question at a time** — resolve ambiguity by asking a single focused question and waiting
+   for the answer; never batch questions or guess ahead.
+3. **Propose 2-3 approaches** — present distinct options with trade-offs, not a single foregone one.
+4. **Approval gates** — present each design section and get explicit approval before the next.
+5. **Spec self-review** — check the draft against the design-doc structure below.
+6. **User review gate** — the design doc is not final until the user approves it.
+
+(The Superpowers `superpowers:brainstorming` skill is a compatible reference implementation of
+this process and MAY be used interchangeably where present; it is not required.)
 
 **Announce at start:** "Using rdl-brainstorming to produce a structured spec."
 

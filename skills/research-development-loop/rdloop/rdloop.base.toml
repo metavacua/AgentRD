@@ -5,7 +5,7 @@
 [project]
 name = "unnamed-project"
 target = "wasm32v1-none"
-docs_dir = "docs/superpowers"
+docs_dir = "docs"
 vcs = "none"
 
 [capabilities]

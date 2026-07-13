@@ -1,8 +1,9 @@
 # RDL/tests/test_agnostic_references.py
 from pathlib import Path
 import re
+from _paths import SKILLS_ROOT
 
-REFDIR = Path("/home/metavacua/.claude/skills/research-development-loop/references")
+REFDIR = SKILLS_ROOT / "research-development-loop" / "references"
 BANNED = ["metavacua", "babel-harness", "chrishayuk", "pi-harness", "ollama", "larql"]
 FILES = ["delegation.md", "issue-governance.md", "dependency-exploration.md", "hooks-architecture.md"]
 

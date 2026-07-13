@@ -1,0 +1,355 @@
+@prefix plog: <https://github.com/metavacua/AgentRD/paralogic#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+plog:zizzi2010 rdf:type plog:Publication .
+plog:zizzi2010 skos:prefLabel "From Quantum Metalanguage to the Logic of Qubits" .
+plog:zizzi2010 plog:status "verified" .
+plog:zizzi2010 dcterms:source <https://arxiv.org/abs/1003.5976> .
+plog:zizzi2010 dcterms:date "2010" .
+plog:zizzi2010 dcterms:identifier "arXiv:1003.5976" .
+plog:zizzi2010 dcterms:creator "Zizzi" .
+plog:zizzi2010 skos:note "PhD thesis, 138pp; Lq from a quantum metalanguage via Sambin's Basic Logic. Triple (paraconsistent∧paracomplete∧non-reflexive)+no-go claim located here per curator; not extracted verbatim from abstract." .
+plog:zizzi2006 rdf:type plog:Publication .
+plog:zizzi2006 skos:prefLabel "Basic Logic and Quantum Entanglement" .
+plog:zizzi2006 plog:status "verified" .
+plog:zizzi2006 dcterms:source <https://arxiv.org/abs/quant-ph/0611119> .
+plog:zizzi2006 dcterms:date "2006" .
+plog:zizzi2006 dcterms:identifier "arXiv:quant-ph/0611119" .
+plog:zizzi2006 dcterms:creator "Zizzi" .
+plog:dacostaKrause1994 rdf:type plog:Publication .
+plog:dacostaKrause1994 skos:prefLabel "Schrodinger Logics" .
+plog:dacostaKrause1994 plog:status "verified" .
+plog:dacostaKrause1994 dcterms:source <https://link.springer.com/article/10.1007/BF01057649> .
+plog:dacostaKrause1994 dcterms:date "1994" .
+plog:dacostaKrause1994 dcterms:identifier "Studia Logica 53(4); doi:10.1007/BF01057649" .
+plog:dacostaKrause1994 dcterms:creator "da Costa" .
+plog:dacostaKrause1994 dcterms:creator "Krause" .
+plog:nrlFoundPhys2015 rdf:type plog:Publication .
+plog:nrlFoundPhys2015 skos:prefLabel "Non-reflexive Logical Foundation for Quantum Mechanics" .
+plog:nrlFoundPhys2015 plog:status "verified" .
+plog:nrlFoundPhys2015 dcterms:source <https://link.springer.com/article/10.1007/s10701-014-9848-3> .
+plog:nrlFoundPhys2015 dcterms:date "2015" .
+plog:nrlFoundPhys2015 dcterms:identifier "Found. Phys.; doi:10.1007/s10701-014-9848-3" .
+plog:nicolaiRossi rdf:type plog:Publication .
+plog:nicolaiRossi skos:prefLabel "Systems for Non-Reflexive Consequence" .
+plog:nicolaiRossi plog:status "verified" .
+plog:nicolaiRossi dcterms:source <https://link.springer.com/article/10.1007/s11225-023-10049-2> .
+plog:nicolaiRossi dcterms:identifier "Studia Logica; doi:10.1007/s11225-023-10049-2" .
+plog:nicolaiRossi dcterms:creator "Nicolai" .
+plog:nicolaiRossi dcterms:creator "Rossi" .
+plog:frenchReflexivity rdf:type plog:Publication .
+plog:frenchReflexivity skos:prefLabel "Structural Reflexivity and the Paradoxes of Self-Reference" .
+plog:frenchReflexivity plog:status "verified" .
+plog:frenchReflexivity dcterms:source <https://quod.lib.umich.edu/e/ergo/12405314.0003.005> .
+plog:frenchReflexivity dcterms:identifier "Ergo" .
+plog:frenchReflexivity dcterms:creator "French" .
+plog:ccmLFI rdf:type plog:Publication .
+plog:ccmLFI skos:prefLabel "Logics of Formal Inconsistency" .
+plog:ccmLFI plog:status "verified" .
+plog:ccmLFI dcterms:source <https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=7746fe65efb386f6226c9116145b1495b7b79d15> .
+plog:ccmLFI dcterms:identifier "Handbook of Philosophical Logic" .
+plog:ccmLFI dcterms:creator "Carnielli" .
+plog:ccmLFI dcterms:creator "Coniglio" .
+plog:ccmLFI dcterms:creator "Marcos" .
+plog:carnielliRodrigues2019 rdf:type plog:Publication .
+plog:carnielliRodrigues2019 skos:prefLabel "An epistemic approach to paraconsistency: a logic of evidence and truth" .
+plog:carnielliRodrigues2019 plog:status "verified" .
+plog:carnielliRodrigues2019 dcterms:source <https://doi.org/10.1007/s11229-017-1621-7> .
+plog:carnielliRodrigues2019 dcterms:date "2019" .
+plog:carnielliRodrigues2019 dcterms:identifier "Synthese; doi:10.1007/s11229-017-1621-7 (online 2017)" .
+plog:carnielliRodrigues2019 dcterms:creator "Carnielli" .
+plog:carnielliRodrigues2019 dcterms:creator "Rodrigues" .
+plog:carnielliRodrigues2019 skos:note "Anti-dialetheist: a contradiction A/¬A expresses conflicting non-conclusive EVIDENCE (reasons to believe A true), strictly weaker than truth; the consequence relation trivializes under any TRUE contradiction. Verified 3-0." .
+plog:arenhart2020 rdf:type plog:Publication .
+plog:arenhart2020 skos:prefLabel "The evidence approach to paraconsistency versus the paraconsistent approach to evidence" .
+plog:arenhart2020 plog:status "verified" .
+plog:arenhart2020 dcterms:source <https://doi.org/10.1007/s11229-020-02813-x> .
+plog:arenhart2020 dcterms:date "2020" .
+plog:arenhart2020 dcterms:identifier "Synthese 198(12):11537-11559; doi:10.1007/s11229-020-02813-x" .
+plog:arenhart2020 dcterms:creator "Arenhart" .
+plog:antunesAxioms2020 rdf:type plog:Publication .
+plog:antunesAxioms2020 skos:prefLabel "Kripke-Style Models for Logics of Evidence and Truth" .
+plog:antunesAxioms2020 plog:status "verified" .
+plog:antunesAxioms2020 dcterms:source <https://doi.org/10.3390/axioms9030100> .
+plog:antunesAxioms2020 dcterms:date "2020" .
+plog:antunesAxioms2020 dcterms:identifier "Axioms 9(3):100; doi:10.3390/axioms9030100" .
+plog:antunesAxioms2020 dcterms:creator "Antunes" .
+plog:antunesAxioms2020 dcterms:creator "Carnielli" .
+plog:antunesAxioms2020 dcterms:creator "Kapsner" .
+plog:antunesAxioms2020 dcterms:creator "Rodrigues" .
+plog:antunesJPL2022 rdf:type plog:Publication .
+plog:antunesJPL2022 skos:prefLabel "Valuation semantics for first-order logics of evidence and truth" .
+plog:antunesJPL2022 plog:status "verified" .
+plog:antunesJPL2022 dcterms:source <https://arxiv.org/abs/2106.09850> .
+plog:antunesJPL2022 dcterms:date "2022" .
+plog:antunesJPL2022 dcterms:identifier "J. Philosophical Logic; arXiv:2106.09850; doi:10.1007/s10992-022-09662-8" .
+plog:antunesJPL2022 dcterms:creator "Antunes" .
+plog:antunesJPL2022 dcterms:creator "Rodrigues" .
+plog:antunesJPL2022 dcterms:creator "Carnielli" .
+plog:antunesJPL2022 dcterms:creator "Coniglio" .
+plog:carnielliRecovery rdf:type plog:Publication .
+plog:carnielliRecovery skos:prefLabel "Recovery operators, paraconsistency and duality" .
+plog:carnielliRecovery plog:status "verified" .
+plog:carnielliRecovery dcterms:source <https://philarchive.org/archive/CARROP-9> .
+plog:carnielliRecovery dcterms:creator "Carnielli" .
+plog:carnielliRecovery dcterms:creator "Coniglio" .
+plog:carnielliRecovery dcterms:creator "Rodrigues" .
+plog:carnielliRecovery skos:note "Introduces mbC (LFI) / mbD (LFU) / mbCD / mbCDE duality." .
+plog:marcosParanormal rdf:type plog:Publication .
+plog:marcosParanormal skos:prefLabel "Nearly every normal modal logic is paranormal" .
+plog:marcosParanormal plog:status "verified" .
+plog:marcosParanormal dcterms:source <https://philpapers.org/rec/MARNEN> .
+plog:marcosParanormal dcterms:identifier "Logique et Analyse" .
+plog:marcosParanormal dcterms:creator "Marcos" .
+plog:dallaChiaraGiuntini1989 rdf:type plog:Publication .
+plog:dallaChiaraGiuntini1989 skos:prefLabel "Paraconsistent quantum logics" .
+plog:dallaChiaraGiuntini1989 plog:status "verified" .
+plog:dallaChiaraGiuntini1989 dcterms:source <https://iep.utm.edu/qu-logic/> .
+plog:dallaChiaraGiuntini1989 dcterms:date "1989" .
+plog:dallaChiaraGiuntini1989 dcterms:identifier "Foundations of Physics" .
+plog:dallaChiaraGiuntini1989 dcterms:creator "Dalla Chiara" .
+plog:dallaChiaraGiuntini1989 dcterms:creator "Giuntini" .
+plog:contextualityBivalence2018 rdf:type plog:Publication .
+plog:contextualityBivalence2018 skos:prefLabel "Quantum contextuality implies a logic that does not obey the principle of bivalence" .
+plog:contextualityBivalence2018 plog:status "verified" .
+plog:contextualityBivalence2018 dcterms:source <https://arxiv.org/pdf/1802.07390> .
+plog:contextualityBivalence2018 dcterms:date "2018" .
+plog:contextualityBivalence2018 dcterms:identifier "arXiv:1802.07390" .
+plog:gorankoRefutation rdf:type plog:Publication .
+plog:gorankoRefutation skos:prefLabel "Refutation systems: an overview and some applications to philosophical logics" .
+plog:gorankoRefutation plog:status "verified" .
+plog:gorankoRefutation dcterms:source <https://www2.philosophy.su.se/goranko/papers/Refutation%20systems%20-%20an%20overview%20and%20some%20applications%20to%20philosophical%20logics%20-%202019-08-28_final.pdf> .
+plog:gorankoRefutation dcterms:date "2019" .
+plog:gorankoRefutation dcterms:creator "Goranko" .
+plog:qeParaconsistent2024 rdf:type plog:Publication .
+plog:qeParaconsistent2024 skos:prefLabel "Quantum Entanglement Through the Lens of Paraconsistent Logic" .
+plog:qeParaconsistent2024 plog:status "verified" .
+plog:qeParaconsistent2024 dcterms:source <https://arxiv.org/abs/2405.08775> .
+plog:qeParaconsistent2024 dcterms:date "2024" .
+plog:qeParaconsistent2024 dcterms:identifier "arXiv:2405.08775" .
+plog:kochenSpecker rdf:type plog:Theorem .
+plog:kochenSpecker skos:prefLabel "Kochen-Specker (Bell-KS) no-go theorem" .
+plog:kochenSpecker plog:status "verified" .
+plog:kochenSpecker dcterms:source <https://en.wikipedia.org/wiki/Kochen%E2%80%93Specker_theorem> .
+plog:kochenSpecker dcterms:date "1967" .
+plog:kochenSpecker skos:note "Bell 1966; Kochen & Specker 1967. Contextuality; constrains non-contextual hidden variables." .
+plog:bellTheorem rdf:type plog:Theorem .
+plog:bellTheorem skos:prefLabel "Bell's theorem (nonlocality no-go)" .
+plog:bellTheorem plog:status "verified" .
+plog:explosion rdf:type plog:Principle .
+plog:explosion skos:prefLabel "Explosion / ex contradictione quodlibet (ECQ)" .
+plog:explosion plog:status "verified" .
+plog:excludedMiddle rdf:type plog:Principle .
+plog:excludedMiddle skos:prefLabel "Excluded middle / tertium non datur (LEM)" .
+plog:excludedMiddle plog:status "verified" .
+plog:identityReflexivity rdf:type plog:Principle .
+plog:identityReflexivity skos:prefLabel "Reflexivity of identity (a = a)" .
+plog:identityReflexivity plog:status "verified" .
+plog:consequenceReflexivity rdf:type plog:Principle .
+plog:consequenceReflexivity skos:prefLabel "Structural reflexivity of consequence (A |- A)" .
+plog:consequenceReflexivity plog:status "verified" .
+plog:exchange rdf:type plog:Principle .
+plog:exchange skos:prefLabel "Structural rule: exchange" .
+plog:exchange plog:status "verified" .
+plog:associativity rdf:type plog:Principle .
+plog:associativity skos:prefLabel "Structural rule: associativity" .
+plog:associativity plog:status "verified" .
+plog:bivalence rdf:type plog:Principle .
+plog:bivalence skos:prefLabel "Bivalence" .
+plog:bivalence plog:status "verified" .
+plog:distributivity rdf:type plog:Principle .
+plog:distributivity skos:prefLabel "Distributivity of the lattice of propositions" .
+plog:distributivity plog:status "verified" .
+plog:paraconsistent rdf:type plog:Logic .
+plog:paraconsistent skos:prefLabel "Paraconsistent logic" .
+plog:paraconsistent plog:status "verified" .
+plog:paracomplete rdf:type plog:Logic .
+plog:paracomplete skos:prefLabel "Paracomplete logic" .
+plog:paracomplete plog:status "verified" .
+plog:paranormal rdf:type plog:Logic .
+plog:paranormal skos:prefLabel "Paranormal logic (paraconsistent AND paracomplete)" .
+plog:paranormal plog:status "verified" .
+plog:paranormal plog:witnessedBy plog:marcosParanormal .
+plog:paranormal skos:note "The PROPERTY (paraconsistent AND paracomplete) is verified 3-0; but the primary source COINING the term 'paranormal' was not pinned by adversarial verification (source papers say 'paraconsistent and paracomplete' / 'paradefinite' / 'non-alethic'). marcosParanormal uses the term; coinage attribution unconfirmed." .
+plog:LFI rdf:type plog:Logic .
+plog:LFI skos:prefLabel "Logic of Formal Inconsistency" .
+plog:LFI plog:status "verified" .
+plog:LFI plog:witnessedBy plog:ccmLFI .
+plog:LFU rdf:type plog:Logic .
+plog:LFU skos:prefLabel "Logic of Formal Undeterminedness" .
+plog:LFU plog:status "verified" .
+plog:LFU plog:witnessedBy plog:carnielliRecovery .
+plog:mbCDE rdf:type plog:Logic .
+plog:mbCDE skos:prefLabel "mbCDE (paranormal LFI+LFU)" .
+plog:mbCDE plog:status "verified" .
+plog:mbCDE plog:witnessedBy plog:carnielliRecovery .
+plog:LET rdf:type plog:Logic .
+plog:LET skos:prefLabel "Logic of Evidence and Truth (umbrella; LET_J, LET_F)" .
+plog:LET plog:status "verified" .
+plog:LET plog:witnessedBy plog:carnielliRodrigues2019 .
+plog:LET_J rdf:type plog:Logic .
+plog:LET_J skos:prefLabel "LET_J (extends BLE / Nelson's N4 with classicality operator)" .
+plog:LET_J plog:status "verified" .
+plog:LET_J plog:witnessedBy plog:carnielliRodrigues2019 .
+plog:LET_J plog:witnessedBy plog:antunesJPL2022 .
+plog:LET_F rdf:type plog:Logic .
+plog:LET_F skos:prefLabel "LET_F (extends FDE with dual operators o and *)" .
+plog:LET_F plog:status "verified" .
+plog:LET_F plog:witnessedBy plog:antunesAxioms2020 .
+plog:BLE rdf:type plog:Logic .
+plog:BLE skos:prefLabel "Basic Logic of Evidence (paraconsistent AND paracomplete natural-deduction base)" .
+plog:BLE plog:status "verified" .
+plog:BLE plog:witnessedBy plog:carnielliRodrigues2019 .
+plog:FDE rdf:type plog:Logic .
+plog:FDE skos:prefLabel "First-Degree Entailment / Belnap-Dunn four-valued logic (values: T, F, both=glut, neither=gap)" .
+plog:FDE plog:status "verified" .
+plog:FDE plog:witnessedBy plog:antunesAxioms2020 .
+plog:N4 rdf:type plog:Logic .
+plog:N4 skos:prefLabel "Nelson's paraconsistent logic N4" .
+plog:N4 plog:status "verified" .
+plog:N4 plog:witnessedBy plog:carnielliRodrigues2019 .
+plog:nonReflexiveIdentity rdf:type plog:Logic .
+plog:nonReflexiveIdentity skos:prefLabel "Non-reflexive logic (identity a=a fails) / Schrodinger logic" .
+plog:nonReflexiveIdentity plog:status "verified" .
+plog:nonReflexiveIdentity plog:witnessedBy plog:dacostaKrause1994 .
+plog:nonReflexiveIdentity plog:witnessedBy plog:nrlFoundPhys2015 .
+plog:nonReflexiveConsequence rdf:type plog:Logic .
+plog:nonReflexiveConsequence skos:prefLabel "Non-reflexive consequence (A|-A fails)" .
+plog:nonReflexiveConsequence plog:status "verified" .
+plog:nonReflexiveConsequence plog:witnessedBy plog:nicolaiRossi .
+plog:nonReflexiveConsequence plog:witnessedBy plog:frenchReflexivity .
+plog:basicLogic rdf:type plog:Logic .
+plog:basicLogic skos:prefLabel "Basic Logic (Sambin) — maximally substructural core, reflection principle" .
+plog:basicLogic plog:status "verified" .
+plog:basicLogic dcterms:creator "Sambin" .
+plog:basicLogic skos:note "Connectives introduced by reflecting metalinguistic links; strict control of structural rules." .
+plog:Lq rdf:type plog:Logic .
+plog:Lq skos:prefLabel "Logic of one qubit (Lq)" .
+plog:Lq plog:status "verified" .
+plog:Lq dcterms:creator "Zizzi" .
+plog:Lq plog:witnessedBy plog:zizzi2010 .
+plog:Lq skos:note "Adds a 'quantum superposition' connective over a quantum metalanguage." .
+plog:L2q rdf:type plog:Logic .
+plog:L2q skos:prefLabel "Logic of two qubits (L2q)" .
+plog:L2q plog:status "user-asserted" .
+plog:L2q skos:note "Curator pointer; extension of Lq (entanglement). Not independently verified." .
+plog:Lnq rdf:type plog:Logic .
+plog:Lnq skos:prefLabel "Logic of n qubits (Lnq)" .
+plog:Lnq plog:status "user-asserted" .
+plog:Lnq skos:note "Curator pointer; extension of Lq. Not independently verified." .
+plog:quantumLogic rdf:type plog:Logic .
+plog:quantumLogic skos:prefLabel "Quantum logic (Birkhoff-von Neumann)" .
+plog:quantumLogic plog:status "verified" .
+plog:quantumLogic dcterms:creator "Birkhoff" .
+plog:quantumLogic dcterms:creator "von Neumann" .
+plog:substructural rdf:type plog:Logic .
+plog:substructural skos:prefLabel "Substructural logic" .
+plog:substructural plog:status "verified" .
+plog:nonCommutative rdf:type plog:Logic .
+plog:nonCommutative skos:prefLabel "Non-commutative logic (drops exchange; Lambek)" .
+plog:nonCommutative plog:status "verified" .
+plog:nonAssociative rdf:type plog:Logic .
+plog:nonAssociative skos:prefLabel "Non-associative logic (drops associativity; NL)" .
+plog:nonAssociative plog:status "verified" .
+plog:refutational rdf:type plog:Logic .
+plog:refutational skos:prefLabel "Refutational / rejection (complementary) logic" .
+plog:refutational plog:status "verified" .
+plog:refutational dcterms:creator "Lukasiewicz" .
+plog:refutational plog:witnessedBy plog:gorankoRefutation .
+plog:refutational skos:note "Axiomatizes invalidity; rejection != negation." .
+plog:popperianLogic rdf:type plog:Logic .
+plog:popperianLogic skos:prefLabel "Popperian logic (falsificationist / dual)" .
+plog:popperianLogic plog:status "user-asserted" .
+plog:popperianLogic skos:note "Curator places in the cluster. Likely refers to falsificationist/dual-intuitionistic/refutational systems; specific system not verified this session (training-recall-Q gloss)." .
+plog:nonMonotonic rdf:type plog:Logic .
+plog:nonMonotonic skos:prefLabel "Non-monotonic reasoning" .
+plog:nonMonotonic plog:status "verified" .
+plog:nonMonotonic skos:note "Node verified as a real area; its RELATION to the cluster is user-hypothesis." .
+plog:paraidentityCluster rdf:type plog:Cluster .
+plog:paraidentityCluster skos:prefLabel "Paraidentity / parareflexive logics (curator's organizing cluster)" .
+plog:paraidentityCluster plog:status "user-asserted" .
+plog:paraidentityCluster skos:note "NOT an established literature term (searched; 'non-reflexive' is standard). The curator's cluster gathering the identity/reflexivity-failing logics tied to quantum no-go theorems, with unpublished results only partially visible from the cited sources." .
+plog:quantumIndistinguishability rdf:type plog:Concept .
+plog:quantumIndistinguishability skos:prefLabel "Quantum indistinguishability / non-individuality of particles" .
+plog:quantumIndistinguishability plog:status "verified" .
+plog:selfReference rdf:type plog:Concept .
+plog:selfReference skos:prefLabel "Self-reference / semantic closure / truth predicate" .
+plog:selfReference plog:status "verified" .
+plog:evidence rdf:type plog:Concept .
+plog:evidence skos:prefLabel "Non-conclusive evidence (may be lacking = gap-like, or conflicting = glut-like); weaker than truth" .
+plog:evidence plog:status "verified" .
+plog:classicalityOperator rdf:type plog:Principle .
+plog:classicalityOperator skos:prefLabel "Classicality operator o (dual non-classicality *); oA = A behaves classically / conclusive evidence" .
+plog:classicalityOperator plog:status "verified" .
+plog:classicalityOperator plog:witnessedBy plog:carnielliRodrigues2019 .
+plog:gentleExplosion rdf:type plog:Principle .
+plog:gentleExplosion skos:prefLabel "Gentle explosion: oA, A, not-A |- B  while  A, not-A |/- B (the LFI mechanism; Derivability Adjustment Theorem)" .
+plog:gentleExplosion plog:status "verified" .
+plog:gentleExplosion plog:witnessedBy plog:ccmLFI .
+plog:dialetheism rdf:type plog:Concept .
+plog:dialetheism skos:prefLabel "Dialetheism (Priest): some contradictions are TRUE" .
+plog:dialetheism plog:status "verified" .
+plog:antiDialetheism rdf:type plog:Concept .
+plog:antiDialetheism skos:prefLabel "Anti-dialetheism: contradictions are conflicting evidence, never true (the LET stance)" .
+plog:antiDialetheism plog:status "verified" .
+plog:antiDialetheism plog:witnessedBy plog:carnielliRodrigues2019 .
+plog:antiDialetheism plog:witnessedBy plog:arenhart2020 .
+plog:paraconsistent plog:rejects plog:explosion .
+plog:paracomplete plog:rejects plog:excludedMiddle .
+plog:paranormal plog:combines plog:paraconsistent .
+plog:paranormal plog:combines plog:paracomplete .
+plog:LFI plog:internalizes plog:explosion .
+plog:LFI plog:dualOf plog:LFU .
+plog:LFI skos:broader plog:paraconsistent .
+plog:LFU plog:internalizes plog:excludedMiddle .
+plog:LFU skos:broader plog:paracomplete .
+plog:mbCDE plog:isA plog:paranormal .
+plog:mbCDE plog:combines plog:LFI .
+plog:mbCDE plog:combines plog:LFU .
+plog:LET plog:formalizes plog:carnielliRodrigues2019 .
+plog:LET skos:broader plog:LFI .
+plog:nonReflexiveIdentity plog:rejects plog:identityReflexivity .
+plog:nonReflexiveIdentity plog:motivatedBy plog:quantumIndistinguishability .
+plog:nonReflexiveConsequence plog:rejects plog:consequenceReflexivity .
+plog:nonReflexiveConsequence plog:motivatedBy plog:selfReference .
+plog:nonCommutative plog:rejects plog:exchange .
+plog:nonCommutative plog:isA plog:substructural .
+plog:nonAssociative plog:rejects plog:associativity .
+plog:nonAssociative plog:isA plog:substructural .
+plog:nonReflexiveConsequence plog:isA plog:substructural .
+plog:basicLogic plog:isA plog:substructural .
+plog:Lq plog:builtOn plog:basicLogic .
+plog:Lq plog:witnessedBy plog:zizzi2010 .
+plog:L2q plog:extends plog:Lq .
+plog:Lnq plog:extends plog:Lq .
+plog:quantumLogic plog:rejects plog:distributivity .
+plog:kochenSpecker plog:isA plog:bellTheorem .
+plog:kochenSpecker plog:implies plog:bivalence .
+plog:refutational plog:axiomatizes plog:consequenceReflexivity .
+plog:paraidentityCluster skos:member plog:Lq .
+plog:paraidentityCluster skos:member plog:L2q .
+plog:paraidentityCluster skos:member plog:Lnq .
+plog:paraidentityCluster skos:member plog:nonReflexiveIdentity .
+plog:paraidentityCluster skos:member plog:nonReflexiveConsequence .
+plog:paraidentityCluster skos:member plog:popperianLogic .
+plog:paraidentityCluster skos:member plog:kochenSpecker .
+plog:paraidentityCluster plog:relatedTo plog:refutational .
+plog:paraidentityCluster plog:relatedTo plog:nonMonotonic .
+plog:paraidentityCluster plog:witnessedBy plog:zizzi2010 .
+plog:LET_J plog:extends plog:BLE .
+plog:BLE plog:relatedTo plog:N4 .
+plog:LET_F plog:extends plog:FDE .
+plog:BLE plog:isA plog:paranormal .
+plog:FDE plog:isA plog:paranormal .
+plog:LET_J plog:isA plog:paranormal .
+plog:LET_F plog:isA plog:paranormal .
+plog:LET_J skos:broader plog:LET .
+plog:LET_F skos:broader plog:LET .
+plog:LET plog:formalizes plog:evidence .
+plog:LET_F plog:uses plog:classicalityOperator .
+plog:LFI plog:uses plog:gentleExplosion .
+plog:LET plog:adopts plog:antiDialetheism .
+plog:antiDialetheism plog:opposes plog:dialetheism .

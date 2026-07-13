@@ -1,5 +1,6 @@
 from pathlib import Path
-BRAIN = Path("/home/metavacua/.claude/skills/rdl-brainstorming")
+from _paths import SKILLS_ROOT
+BRAIN = SKILLS_ROOT / "rdl-brainstorming"
 
 def test_frontmatter_name():
     text = (BRAIN / "SKILL.md").read_text()

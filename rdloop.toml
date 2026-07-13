@@ -1,0 +1,46 @@
+# rdloop.toml — Research-Development-Loop manifest for the AgentRD project itself.
+# Scaffolded by the RDL loop (manifest was absent). PAUSED FOR USER REVIEW.
+# Model: zero ambient authority — every capability DENIED unless explicitly granted.
+#
+# This project's task: decouple the RDL skill chain from the `superpowers` plugin,
+# replacing idiosyncratic parts with industry-standard specs/tools. Note that
+# `docs_dir` below is deliberately "docs" (NOT "docs/superpowers") — the hardcoded
+# "docs/superpowers" default is itself one of the couplings this project removes.
+
+[project]
+name = "AgentRD"
+target = "native"          # markdown skills + stdlib-Python tests; not a wasm sandbox
+docs_dir = "docs"          # decoupled from the "docs/superpowers" default
+vcs = "git"
+
+[capabilities]
+filesystem = ["skills", "docs", "papers", "witnesses", "rdloop.toml", "pyproject.toml", "README.md"]  # write scope: this repo only
+network = []               # no network needed to edit skills; web-verify uses WebSearch tool, not subprocess
+subprocess = ["git", "python3", "pytest", "xmllint", "xsltproc", "jing", "trang", "pdflatex", "cargo", "rustc", "wasm-tools", "wasmtime"]  # Phase-5 scholarly-white-paper toolchain (DocBook / RELAX NG / XSLT)
+clock = false
+random = false
+threads = false
+gpu = false
+
+[dependencies]
+standard = "pep621"        # industry-standard Python manifest; deps declared in pyproject.toml
+manifest = "pyproject.toml"
+toolchain = "none"         # no pinned interpreter file; requires-python is declared in pyproject.toml
+
+[resources]
+memory_budget_mb = 512     # pytest of markdown+stdlib is light; well under the host inference ceiling
+serialize_tasks = true
+
+[issues]
+tracker = "none"           # no external tracker wired; deferred work goes to the scholarly paper's limitations
+write_repos = []
+read_repos = []
+
+[delegation]
+subagent = "inline"        # skill editing needs conversation context; handle inline
+
+[security]
+default_posture = "deny"
+write_allowed = ["skills", "docs", "papers", "witnesses", "rdloop.toml", "pyproject.toml", "README.md"]
+
+[x]

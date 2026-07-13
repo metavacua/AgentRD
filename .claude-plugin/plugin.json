@@ -1,0 +1,8 @@
+{
+  "name": "rdl",
+  "description": "Research-Development-Loop: a degrees-of-freedom-reducing R&D orchestrator whose canonical core (DOF invariant + terminal classification + adaptive dispatch) is a formal specification injected each session. The core is a specification, not (yet) runtime enforcement; capability gating and terminal-class checks are being wired as hooks incrementally.",
+  "version": "0.1.0",
+  "author": { "name": "metavacua" },
+  "license": "AGPL-3.0-or-later",
+  "keywords": ["research", "development", "tdd", "systematic-debugging", "constraint-system", "skills", "orchestrator"]
+}

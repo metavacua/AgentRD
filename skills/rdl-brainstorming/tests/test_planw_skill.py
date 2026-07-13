@@ -1,5 +1,6 @@
 from pathlib import Path
-PLANW = Path("/home/metavacua/.claude/skills/rdl-writing-plans")
+from _paths import SKILLS_ROOT
+PLANW = SKILLS_ROOT / "rdl-writing-plans"
 
 def test_frontmatter_name():
     assert "name: rdl-writing-plans" in (PLANW / "SKILL.md").read_text()

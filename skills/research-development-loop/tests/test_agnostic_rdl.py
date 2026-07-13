@@ -1,7 +1,8 @@
 # RDL/tests/test_agnostic_rdl.py
 from pathlib import Path
+from _paths import SKILLS_ROOT
 
-SK = Path("/home/metavacua/.claude/skills/research-development-loop/SKILL.md")
+SK = SKILLS_ROOT / "research-development-loop" / "SKILL.md"
 BANNED = ["metavacua", "babel-harness", "chrishayuk", "pi-harness", "larql",
           "ollama", "bin/coding-agent", "6.3 gb"]
 

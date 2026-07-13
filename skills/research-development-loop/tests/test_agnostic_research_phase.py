@@ -1,6 +1,7 @@
 from pathlib import Path
+from _paths import SKILLS_ROOT
 
-RP = Path("/home/metavacua/.claude/skills/research-phase/SKILL.md")
+RP = SKILLS_ROOT / "research-phase" / "SKILL.md"
 BANNED = ["metavacua", "babel-harness", "larql", "chrishayuk", "pi-harness"]
 
 def test_no_hardcoded_identifiers():

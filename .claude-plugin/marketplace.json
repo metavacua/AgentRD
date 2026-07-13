@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "agentrd",
+  "description": "Local marketplace for the AgentRD Research-Development-Loop plugin.",
+  "owner": { "name": "metavacua" },
+  "plugins": [
+    {
+      "name": "rdl",
+      "source": ".",
+      "description": "Research-Development-Loop: a degrees-of-freedom-reducing R&D orchestrator with a canonical injected core (invariant + terminal classification + adaptive dispatch) and formal capability contracts."
+    }
+  ]
+}
