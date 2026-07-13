@@ -75,6 +75,8 @@ def validate(m: dict) -> None:
     for s in REQUIRED_SECTIONS:
         if s not in m:
             raise ManifestError(f"missing required section [{s}]")
+        if not isinstance(m[s], dict):
+            raise ManifestError(f"section [{s}] must be a table")
     caps = m["capabilities"]
     for c in CAP_LIST:
         if not isinstance(caps.get(c), list):
@@ -94,6 +96,10 @@ def validate(m: dict) -> None:
         raise ManifestError(
             f"dependencies.standard '{std}' is not recognized; use one of "
             f"{RECOGNIZED_STANDARDS} or the explicit 'custom' off-list opt-in")
+    # NOTE: audit finding #7 proposed enforcing write_allowed ⊆ capabilities.filesystem, but the
+    # example manifest (references/example-manifest.metavacua.toml) is primary evidence that they
+    # are DISTINCT, additive write scopes (SKILL.md: writes authorized by filesystem + write_allowed),
+    # not a narrowing subset. No subset check — it would reject valid manifests.
 
 def parse_native_deps(standard: str, manifest_path) -> set:
     """Return the dependency names declared in the referenced native manifest.

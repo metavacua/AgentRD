@@ -2,7 +2,8 @@
 
 Each **phase** `κ` is a formal DOF-reducer with a contract `⟨pre, reduction, post, accept⟩` where
 `post ⇒ (|W′| < |W|)` or a Terminal classification, and `accept` is a mechanically checkable
-postcondition. The phase contracts live in `skills/research-development-loop/phases/<κ>.md`.
+postcondition. The phase contracts and per-phase methods are defined in the orchestrator
+`skills/research-development-loop/SKILL.md`.
 
 A phase is carried out by binding it to a **capability** — a tool, skill, dependency, permission,
 or resource that is `granted ∩ present` (the manifest's usability relation). Binding is adaptive

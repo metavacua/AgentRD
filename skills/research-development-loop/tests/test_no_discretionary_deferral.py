@@ -3,8 +3,9 @@
 # was used as a skip reason. The only legitimate skip is an empirical incapability —
 # a required capability that is not `granted AND present`.
 from pathlib import Path
+from _paths import SKILLS_ROOT
 
-ORCH = (Path("/home/metavacua/.claude/skills/research-development-loop") / "SKILL.md").read_text()
+ORCH = (SKILLS_ROOT / "research-development-loop" / "SKILL.md").read_text()
 LOW = ORCH.lower()
 
 

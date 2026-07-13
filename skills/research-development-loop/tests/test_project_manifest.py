@@ -3,8 +3,9 @@
 # last-resort opt-in. Closes Phase-5 finding (c), 2026-07-12.
 import sys
 from pathlib import Path
+from _paths import REPO_ROOT
 
-REPO = Path("/home/metavacua/AgentRD")
+REPO = REPO_ROOT
 sys.path.insert(0, str(REPO / "skills" / "research-development-loop"))
 from rdloop import schema  # noqa: E402
 

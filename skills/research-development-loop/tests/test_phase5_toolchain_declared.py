@@ -4,9 +4,10 @@
 # but the RDL skill and manifest never reflected that requirement.
 import sys
 from pathlib import Path
+from _paths import REPO_ROOT, SKILLS_ROOT
 
-REPO = Path("/home/metavacua/AgentRD")
-SKILLS = Path("/home/metavacua/.claude/skills")
+REPO = REPO_ROOT
+SKILLS = SKILLS_ROOT
 sys.path.insert(0, str(REPO / "skills" / "research-development-loop"))
 from rdloop import schema  # noqa: E402
 

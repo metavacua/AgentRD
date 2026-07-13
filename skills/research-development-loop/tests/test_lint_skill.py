@@ -5,8 +5,9 @@
 import json
 import sys
 from pathlib import Path
+from _paths import SKILLS_ROOT
 
-RDL = Path("/home/metavacua/.claude/skills/research-development-loop")
+RDL = SKILLS_ROOT / "research-development-loop"
 sys.path.insert(0, str(RDL / "scripts"))
 import lint_skill  # noqa: E402
 
@@ -89,7 +90,7 @@ def test_lint_skill_parses_real_file():
 
 
 def test_all_chain_skills_pass_lint():
-    base = Path("/home/metavacua/.claude/skills")
+    base = SKILLS_ROOT
     failures = {}
     for name in CHAIN:
         errs = lint_skill.lint_skill(base / name / "SKILL.md")

@@ -3,8 +3,9 @@
 # unpublished cluster stays user-asserted, never laundered into 'verified'.
 import sys
 from pathlib import Path
+from _paths import REPO_ROOT
 
-KB = Path("/home/metavacua/AgentRD/docs/kb")
+KB = REPO_ROOT / "docs" / "kb"
 sys.path.insert(0, str(KB))
 import kb  # noqa: E402
 

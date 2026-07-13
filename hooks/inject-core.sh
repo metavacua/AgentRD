@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # SessionStart hook: inject the RDL canonical core (invariant + terminal + dispatch)
-# into context, so the governing contract is always present — the one leverage
-# mechanism, carrying a formal contract rather than prose exhortation.
+# into context, so the governing specification is always present. This is INJECTION,
+# not runtime enforcement: the injected core is a formal spec whose compliance is
+# model-dependent until the capability-gate/terminal-class hooks are wired.
 # Emits Claude Code SessionStart JSON: {hookSpecificOutput:{additionalContext}}.
 set -euo pipefail
 

@@ -6,8 +6,9 @@
 import json
 import subprocess
 from pathlib import Path
+from _paths import REPO_ROOT
 
-REPO = Path("/home/metavacua/AgentRD")
+REPO = REPO_ROOT
 PLUGIN_JSON = REPO / ".claude-plugin" / "plugin.json"
 HOOKS_JSON = REPO / "hooks" / "hooks.json"
 INJECT = REPO / "hooks" / "inject-core.sh"

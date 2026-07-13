@@ -5,10 +5,10 @@
 # superpowers when it is present. Forbidding the use of a skill that may or may
 # not be installed is wrong; the invariant is "no hard requirement", not "never used".
 from pathlib import Path
+from _paths import SKILLS_ROOT, REPO_ROOT
 
-SKILLS = Path("/home/metavacua/.claude/skills")
-ORCH = (SKILLS / "research-development-loop" / "SKILL.md").read_text()
-DISPATCH = (Path("/home/metavacua/AgentRD/core") / "dispatch.md").read_text()
+ORCH = (SKILLS_ROOT / "research-development-loop" / "SKILL.md").read_text()
+DISPATCH = (REPO_ROOT / "core" / "dispatch.md").read_text()
 
 
 def test_phase1_binds_rdl_brainstorming():

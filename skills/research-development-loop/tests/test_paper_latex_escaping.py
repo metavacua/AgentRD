@@ -9,8 +9,9 @@ import textwrap
 from pathlib import Path
 
 import pytest
+from _paths import REPO_ROOT
 
-XSL = Path("/home/metavacua/AgentRD/papers/agent-skills/rdl-superpowers-decoupling/xsl/latex.xsl")
+XSL = REPO_ROOT / "papers" / "agent-skills" / "rdl-superpowers-decoupling" / "xsl" / "latex.xsl"
 
 FIXTURE = textwrap.dedent("""\
     <?xml version="1.0" encoding="UTF-8"?>

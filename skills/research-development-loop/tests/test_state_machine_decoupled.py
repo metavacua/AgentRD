@@ -4,8 +4,9 @@
 # to hide superpowers skill-names — adaptively using a present skill is correct; a
 # name-ban would forbid the use of a skill that may or may not be installed.
 from pathlib import Path
+from _paths import SKILLS_ROOT
 
-SK = (Path("/home/metavacua/.claude/skills/research-development-loop") / "SKILL.md").read_text()
+SK = (SKILLS_ROOT / "research-development-loop" / "SKILL.md").read_text()
 
 
 def _dot_block():

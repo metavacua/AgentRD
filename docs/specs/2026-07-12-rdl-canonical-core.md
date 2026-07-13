@@ -87,9 +87,22 @@ the run is reproducible.
 ## 6. Leverage mechanism (H) — one hook
 
 A single `SessionStart`-class hook injects **this core** (I, T, D, and the phase index) into
-context, so the governing contract is always present — the one mechanical primitive, carrying a
-*formal contract* rather than prose discipline. (Superpowers gets its leverage from one injection
-hook; we inject a formalism, not exhortation.)
+context, so the governing specification is always present. This is **injection, not runtime
+enforcement**: the difference from a prose-discipline chain is *content* (a formal specification)
+— compliance is model-dependent until enforcement hooks are wired (see H2). Superpowers gets its
+leverage from the same one-injection channel.
+
+## 6.1 Enforcement (H2) — earning "contract" incrementally
+
+Injection alone makes the core a specification, not a contract. To make it a *contract*, wire
+runtime checks, cheapest/most-decidable first:
+1. **PreToolUse capability gate** — bind `schema.gate()`/`usable()` to a Bash/Write/Edit
+   permission decision so an ungranted subprocess/write is actually denied (deny-by-default enforced).
+2. **Stop/SubagentStop terminal check** — refuse termination unless the turn emitted exactly one
+   of the five terminal classes.
+3. **Binding ledger** — a machine-checkable per-phase `phase → skill@source + accept-evidence`
+   record, with a verifier, so the reproducibility/adaptive-dispatch claim is checkable not asserted.
+Until (1)–(3) exist, the tests and docs MUST call the core a *specification*, not an enforced contract.
 
 ## 7. Module decomposition (what the monolith becomes)
 
