@@ -1,0 +1,266 @@
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2010> <http://www.w3.org/2004/02/skos/core#prefLabel> "From Quantum Metalanguage to the Logic of Qubits" .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2010> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2010> <http://purl.org/dc/terms/source> <https://arxiv.org/abs/1003.5976> .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2010> <http://purl.org/dc/terms/date> "2010" .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2010> <http://purl.org/dc/terms/identifier> "arXiv:1003.5976" .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2010> <http://purl.org/dc/terms/creator> "Zizzi" .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2010> <http://www.w3.org/2004/02/skos/core#note> "PhD thesis, 138pp; Lq from a quantum metalanguage via Sambin's Basic Logic. Triple (paraconsistent∧paracomplete∧non-reflexive)+no-go claim located here per curator; not extracted verbatim from abstract." .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2006> <http://www.w3.org/2004/02/skos/core#prefLabel> "Basic Logic and Quantum Entanglement" .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2006> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2006> <http://purl.org/dc/terms/source> <https://arxiv.org/abs/quant-ph/0611119> .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2006> <http://purl.org/dc/terms/date> "2006" .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2006> <http://purl.org/dc/terms/identifier> "arXiv:quant-ph/0611119" .
+<https://github.com/metavacua/AgentRD/paralogic#zizzi2006> <http://purl.org/dc/terms/creator> "Zizzi" .
+<https://github.com/metavacua/AgentRD/paralogic#dacostaKrause1994> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#dacostaKrause1994> <http://www.w3.org/2004/02/skos/core#prefLabel> "Schrodinger Logics" .
+<https://github.com/metavacua/AgentRD/paralogic#dacostaKrause1994> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#dacostaKrause1994> <http://purl.org/dc/terms/source> <https://link.springer.com/article/10.1007/BF01057649> .
+<https://github.com/metavacua/AgentRD/paralogic#dacostaKrause1994> <http://purl.org/dc/terms/date> "1994" .
+<https://github.com/metavacua/AgentRD/paralogic#dacostaKrause1994> <http://purl.org/dc/terms/identifier> "Studia Logica 53(4); doi:10.1007/BF01057649" .
+<https://github.com/metavacua/AgentRD/paralogic#dacostaKrause1994> <http://purl.org/dc/terms/creator> "da Costa" .
+<https://github.com/metavacua/AgentRD/paralogic#dacostaKrause1994> <http://purl.org/dc/terms/creator> "Krause" .
+<https://github.com/metavacua/AgentRD/paralogic#nrlFoundPhys2015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#nrlFoundPhys2015> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non-reflexive Logical Foundation for Quantum Mechanics" .
+<https://github.com/metavacua/AgentRD/paralogic#nrlFoundPhys2015> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#nrlFoundPhys2015> <http://purl.org/dc/terms/source> <https://link.springer.com/article/10.1007/s10701-014-9848-3> .
+<https://github.com/metavacua/AgentRD/paralogic#nrlFoundPhys2015> <http://purl.org/dc/terms/date> "2015" .
+<https://github.com/metavacua/AgentRD/paralogic#nrlFoundPhys2015> <http://purl.org/dc/terms/identifier> "Found. Phys.; doi:10.1007/s10701-014-9848-3" .
+<https://github.com/metavacua/AgentRD/paralogic#nicolaiRossi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#nicolaiRossi> <http://www.w3.org/2004/02/skos/core#prefLabel> "Systems for Non-Reflexive Consequence" .
+<https://github.com/metavacua/AgentRD/paralogic#nicolaiRossi> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#nicolaiRossi> <http://purl.org/dc/terms/source> <https://link.springer.com/article/10.1007/s11225-023-10049-2> .
+<https://github.com/metavacua/AgentRD/paralogic#nicolaiRossi> <http://purl.org/dc/terms/identifier> "Studia Logica; doi:10.1007/s11225-023-10049-2" .
+<https://github.com/metavacua/AgentRD/paralogic#nicolaiRossi> <http://purl.org/dc/terms/creator> "Nicolai" .
+<https://github.com/metavacua/AgentRD/paralogic#nicolaiRossi> <http://purl.org/dc/terms/creator> "Rossi" .
+<https://github.com/metavacua/AgentRD/paralogic#frenchReflexivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#frenchReflexivity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Structural Reflexivity and the Paradoxes of Self-Reference" .
+<https://github.com/metavacua/AgentRD/paralogic#frenchReflexivity> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#frenchReflexivity> <http://purl.org/dc/terms/source> <https://quod.lib.umich.edu/e/ergo/12405314.0003.005> .
+<https://github.com/metavacua/AgentRD/paralogic#frenchReflexivity> <http://purl.org/dc/terms/identifier> "Ergo" .
+<https://github.com/metavacua/AgentRD/paralogic#frenchReflexivity> <http://purl.org/dc/terms/creator> "French" .
+<https://github.com/metavacua/AgentRD/paralogic#ccmLFI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#ccmLFI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Logics of Formal Inconsistency" .
+<https://github.com/metavacua/AgentRD/paralogic#ccmLFI> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#ccmLFI> <http://purl.org/dc/terms/source> <https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=7746fe65efb386f6226c9116145b1495b7b79d15> .
+<https://github.com/metavacua/AgentRD/paralogic#ccmLFI> <http://purl.org/dc/terms/identifier> "Handbook of Philosophical Logic" .
+<https://github.com/metavacua/AgentRD/paralogic#ccmLFI> <http://purl.org/dc/terms/creator> "Carnielli" .
+<https://github.com/metavacua/AgentRD/paralogic#ccmLFI> <http://purl.org/dc/terms/creator> "Coniglio" .
+<https://github.com/metavacua/AgentRD/paralogic#ccmLFI> <http://purl.org/dc/terms/creator> "Marcos" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://www.w3.org/2004/02/skos/core#prefLabel> "An epistemic approach to paraconsistency: a logic of evidence and truth" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/source> <https://www.researchgate.net/publication/321024784> .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/date> "2019" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/identifier> "Synthese 196:3789-3813" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/creator> "Carnielli" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> <http://purl.org/dc/terms/creator> "Rodrigues" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recovery operators, paraconsistency and duality" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> <http://purl.org/dc/terms/source> <https://philarchive.org/archive/CARROP-9> .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> <http://purl.org/dc/terms/creator> "Carnielli" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> <http://purl.org/dc/terms/creator> "Coniglio" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> <http://purl.org/dc/terms/creator> "Rodrigues" .
+<https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> <http://www.w3.org/2004/02/skos/core#note> "Introduces mbC (LFI) / mbD (LFU) / mbCD / mbCDE duality." .
+<https://github.com/metavacua/AgentRD/paralogic#marcosParanormal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#marcosParanormal> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nearly every normal modal logic is paranormal" .
+<https://github.com/metavacua/AgentRD/paralogic#marcosParanormal> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#marcosParanormal> <http://purl.org/dc/terms/source> <https://philpapers.org/rec/MARNEN> .
+<https://github.com/metavacua/AgentRD/paralogic#marcosParanormal> <http://purl.org/dc/terms/identifier> "Logique et Analyse" .
+<https://github.com/metavacua/AgentRD/paralogic#marcosParanormal> <http://purl.org/dc/terms/creator> "Marcos" .
+<https://github.com/metavacua/AgentRD/paralogic#dallaChiaraGiuntini1989> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#dallaChiaraGiuntini1989> <http://www.w3.org/2004/02/skos/core#prefLabel> "Paraconsistent quantum logics" .
+<https://github.com/metavacua/AgentRD/paralogic#dallaChiaraGiuntini1989> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#dallaChiaraGiuntini1989> <http://purl.org/dc/terms/source> <https://iep.utm.edu/qu-logic/> .
+<https://github.com/metavacua/AgentRD/paralogic#dallaChiaraGiuntini1989> <http://purl.org/dc/terms/date> "1989" .
+<https://github.com/metavacua/AgentRD/paralogic#dallaChiaraGiuntini1989> <http://purl.org/dc/terms/identifier> "Foundations of Physics" .
+<https://github.com/metavacua/AgentRD/paralogic#dallaChiaraGiuntini1989> <http://purl.org/dc/terms/creator> "Dalla Chiara" .
+<https://github.com/metavacua/AgentRD/paralogic#dallaChiaraGiuntini1989> <http://purl.org/dc/terms/creator> "Giuntini" .
+<https://github.com/metavacua/AgentRD/paralogic#contextualityBivalence2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#contextualityBivalence2018> <http://www.w3.org/2004/02/skos/core#prefLabel> "Quantum contextuality implies a logic that does not obey the principle of bivalence" .
+<https://github.com/metavacua/AgentRD/paralogic#contextualityBivalence2018> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#contextualityBivalence2018> <http://purl.org/dc/terms/source> <https://arxiv.org/pdf/1802.07390> .
+<https://github.com/metavacua/AgentRD/paralogic#contextualityBivalence2018> <http://purl.org/dc/terms/date> "2018" .
+<https://github.com/metavacua/AgentRD/paralogic#contextualityBivalence2018> <http://purl.org/dc/terms/identifier> "arXiv:1802.07390" .
+<https://github.com/metavacua/AgentRD/paralogic#gorankoRefutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#gorankoRefutation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Refutation systems: an overview and some applications to philosophical logics" .
+<https://github.com/metavacua/AgentRD/paralogic#gorankoRefutation> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#gorankoRefutation> <http://purl.org/dc/terms/source> <https://www2.philosophy.su.se/goranko/papers/Refutation%20systems%20-%20an%20overview%20and%20some%20applications%20to%20philosophical%20logics%20-%202019-08-28_final.pdf> .
+<https://github.com/metavacua/AgentRD/paralogic#gorankoRefutation> <http://purl.org/dc/terms/date> "2019" .
+<https://github.com/metavacua/AgentRD/paralogic#gorankoRefutation> <http://purl.org/dc/terms/creator> "Goranko" .
+<https://github.com/metavacua/AgentRD/paralogic#qeParaconsistent2024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Publication> .
+<https://github.com/metavacua/AgentRD/paralogic#qeParaconsistent2024> <http://www.w3.org/2004/02/skos/core#prefLabel> "Quantum Entanglement Through the Lens of Paraconsistent Logic" .
+<https://github.com/metavacua/AgentRD/paralogic#qeParaconsistent2024> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#qeParaconsistent2024> <http://purl.org/dc/terms/source> <https://arxiv.org/abs/2405.08775> .
+<https://github.com/metavacua/AgentRD/paralogic#qeParaconsistent2024> <http://purl.org/dc/terms/date> "2024" .
+<https://github.com/metavacua/AgentRD/paralogic#qeParaconsistent2024> <http://purl.org/dc/terms/identifier> "arXiv:2405.08775" .
+<https://github.com/metavacua/AgentRD/paralogic#kochenSpecker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Theorem> .
+<https://github.com/metavacua/AgentRD/paralogic#kochenSpecker> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kochen-Specker (Bell-KS) no-go theorem" .
+<https://github.com/metavacua/AgentRD/paralogic#kochenSpecker> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#kochenSpecker> <http://purl.org/dc/terms/source> <https://en.wikipedia.org/wiki/Kochen%E2%80%93Specker_theorem> .
+<https://github.com/metavacua/AgentRD/paralogic#kochenSpecker> <http://purl.org/dc/terms/date> "1967" .
+<https://github.com/metavacua/AgentRD/paralogic#kochenSpecker> <http://www.w3.org/2004/02/skos/core#note> "Bell 1966; Kochen & Specker 1967. Contextuality; constrains non-contextual hidden variables." .
+<https://github.com/metavacua/AgentRD/paralogic#bellTheorem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Theorem> .
+<https://github.com/metavacua/AgentRD/paralogic#bellTheorem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bell's theorem (nonlocality no-go)" .
+<https://github.com/metavacua/AgentRD/paralogic#bellTheorem> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#explosion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Principle> .
+<https://github.com/metavacua/AgentRD/paralogic#explosion> <http://www.w3.org/2004/02/skos/core#prefLabel> "Explosion / ex contradictione quodlibet (ECQ)" .
+<https://github.com/metavacua/AgentRD/paralogic#explosion> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#excludedMiddle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Principle> .
+<https://github.com/metavacua/AgentRD/paralogic#excludedMiddle> <http://www.w3.org/2004/02/skos/core#prefLabel> "Excluded middle / tertium non datur (LEM)" .
+<https://github.com/metavacua/AgentRD/paralogic#excludedMiddle> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#identityReflexivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Principle> .
+<https://github.com/metavacua/AgentRD/paralogic#identityReflexivity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Reflexivity of identity (a = a)" .
+<https://github.com/metavacua/AgentRD/paralogic#identityReflexivity> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#consequenceReflexivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Principle> .
+<https://github.com/metavacua/AgentRD/paralogic#consequenceReflexivity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Structural reflexivity of consequence (A |- A)" .
+<https://github.com/metavacua/AgentRD/paralogic#consequenceReflexivity> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#exchange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Principle> .
+<https://github.com/metavacua/AgentRD/paralogic#exchange> <http://www.w3.org/2004/02/skos/core#prefLabel> "Structural rule: exchange" .
+<https://github.com/metavacua/AgentRD/paralogic#exchange> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#associativity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Principle> .
+<https://github.com/metavacua/AgentRD/paralogic#associativity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Structural rule: associativity" .
+<https://github.com/metavacua/AgentRD/paralogic#associativity> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#bivalence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Principle> .
+<https://github.com/metavacua/AgentRD/paralogic#bivalence> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bivalence" .
+<https://github.com/metavacua/AgentRD/paralogic#bivalence> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#distributivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Principle> .
+<https://github.com/metavacua/AgentRD/paralogic#distributivity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Distributivity of the lattice of propositions" .
+<https://github.com/metavacua/AgentRD/paralogic#distributivity> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#paraconsistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#paraconsistent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Paraconsistent logic" .
+<https://github.com/metavacua/AgentRD/paralogic#paraconsistent> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#paracomplete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#paracomplete> <http://www.w3.org/2004/02/skos/core#prefLabel> "Paracomplete logic" .
+<https://github.com/metavacua/AgentRD/paralogic#paracomplete> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#paranormal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#paranormal> <http://www.w3.org/2004/02/skos/core#prefLabel> "Paranormal logic (paraconsistent AND paracomplete)" .
+<https://github.com/metavacua/AgentRD/paralogic#paranormal> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#paranormal> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#marcosParanormal> .
+<https://github.com/metavacua/AgentRD/paralogic#LFI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#LFI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Logic of Formal Inconsistency" .
+<https://github.com/metavacua/AgentRD/paralogic#LFI> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#LFI> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#ccmLFI> .
+<https://github.com/metavacua/AgentRD/paralogic#LFU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#LFU> <http://www.w3.org/2004/02/skos/core#prefLabel> "Logic of Formal Undeterminedness" .
+<https://github.com/metavacua/AgentRD/paralogic#LFU> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#LFU> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> .
+<https://github.com/metavacua/AgentRD/paralogic#mbCDE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#mbCDE> <http://www.w3.org/2004/02/skos/core#prefLabel> "mbCDE (paranormal LFI+LFU)" .
+<https://github.com/metavacua/AgentRD/paralogic#mbCDE> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#mbCDE> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#carnielliRecovery> .
+<https://github.com/metavacua/AgentRD/paralogic#LET> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#LET> <http://www.w3.org/2004/02/skos/core#prefLabel> "Logic of Evidence and Truth" .
+<https://github.com/metavacua/AgentRD/paralogic#LET> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#LET> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveIdentity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveIdentity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non-reflexive logic (identity a=a fails) / Schrodinger logic" .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveIdentity> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveIdentity> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#dacostaKrause1994> .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveIdentity> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#nrlFoundPhys2015> .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveConsequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveConsequence> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non-reflexive consequence (A|-A fails)" .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveConsequence> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveConsequence> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#nicolaiRossi> .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveConsequence> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#frenchReflexivity> .
+<https://github.com/metavacua/AgentRD/paralogic#basicLogic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#basicLogic> <http://www.w3.org/2004/02/skos/core#prefLabel> "Basic Logic (Sambin) — maximally substructural core, reflection principle" .
+<https://github.com/metavacua/AgentRD/paralogic#basicLogic> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#basicLogic> <http://purl.org/dc/terms/creator> "Sambin" .
+<https://github.com/metavacua/AgentRD/paralogic#basicLogic> <http://www.w3.org/2004/02/skos/core#note> "Connectives introduced by reflecting metalinguistic links; strict control of structural rules." .
+<https://github.com/metavacua/AgentRD/paralogic#Lq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#Lq> <http://www.w3.org/2004/02/skos/core#prefLabel> "Logic of one qubit (Lq)" .
+<https://github.com/metavacua/AgentRD/paralogic#Lq> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#Lq> <http://purl.org/dc/terms/creator> "Zizzi" .
+<https://github.com/metavacua/AgentRD/paralogic#Lq> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#zizzi2010> .
+<https://github.com/metavacua/AgentRD/paralogic#Lq> <http://www.w3.org/2004/02/skos/core#note> "Adds a 'quantum superposition' connective over a quantum metalanguage." .
+<https://github.com/metavacua/AgentRD/paralogic#L2q> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#L2q> <http://www.w3.org/2004/02/skos/core#prefLabel> "Logic of two qubits (L2q)" .
+<https://github.com/metavacua/AgentRD/paralogic#L2q> <https://github.com/metavacua/AgentRD/paralogic#status> "user-asserted" .
+<https://github.com/metavacua/AgentRD/paralogic#L2q> <http://www.w3.org/2004/02/skos/core#note> "Curator pointer; extension of Lq (entanglement). Not independently verified." .
+<https://github.com/metavacua/AgentRD/paralogic#Lnq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#Lnq> <http://www.w3.org/2004/02/skos/core#prefLabel> "Logic of n qubits (Lnq)" .
+<https://github.com/metavacua/AgentRD/paralogic#Lnq> <https://github.com/metavacua/AgentRD/paralogic#status> "user-asserted" .
+<https://github.com/metavacua/AgentRD/paralogic#Lnq> <http://www.w3.org/2004/02/skos/core#note> "Curator pointer; extension of Lq. Not independently verified." .
+<https://github.com/metavacua/AgentRD/paralogic#quantumLogic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#quantumLogic> <http://www.w3.org/2004/02/skos/core#prefLabel> "Quantum logic (Birkhoff-von Neumann)" .
+<https://github.com/metavacua/AgentRD/paralogic#quantumLogic> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#quantumLogic> <http://purl.org/dc/terms/creator> "Birkhoff" .
+<https://github.com/metavacua/AgentRD/paralogic#quantumLogic> <http://purl.org/dc/terms/creator> "von Neumann" .
+<https://github.com/metavacua/AgentRD/paralogic#substructural> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#substructural> <http://www.w3.org/2004/02/skos/core#prefLabel> "Substructural logic" .
+<https://github.com/metavacua/AgentRD/paralogic#substructural> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#nonCommutative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#nonCommutative> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non-commutative logic (drops exchange; Lambek)" .
+<https://github.com/metavacua/AgentRD/paralogic#nonCommutative> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#nonAssociative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#nonAssociative> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non-associative logic (drops associativity; NL)" .
+<https://github.com/metavacua/AgentRD/paralogic#nonAssociative> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#refutational> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#refutational> <http://www.w3.org/2004/02/skos/core#prefLabel> "Refutational / rejection (complementary) logic" .
+<https://github.com/metavacua/AgentRD/paralogic#refutational> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#refutational> <http://purl.org/dc/terms/creator> "Lukasiewicz" .
+<https://github.com/metavacua/AgentRD/paralogic#refutational> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#gorankoRefutation> .
+<https://github.com/metavacua/AgentRD/paralogic#refutational> <http://www.w3.org/2004/02/skos/core#note> "Axiomatizes invalidity; rejection != negation." .
+<https://github.com/metavacua/AgentRD/paralogic#popperianLogic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#popperianLogic> <http://www.w3.org/2004/02/skos/core#prefLabel> "Popperian logic (falsificationist / dual)" .
+<https://github.com/metavacua/AgentRD/paralogic#popperianLogic> <https://github.com/metavacua/AgentRD/paralogic#status> "user-asserted" .
+<https://github.com/metavacua/AgentRD/paralogic#popperianLogic> <http://www.w3.org/2004/02/skos/core#note> "Curator places in the cluster. Likely refers to falsificationist/dual-intuitionistic/refutational systems; specific system not verified this session (training-recall-Q gloss)." .
+<https://github.com/metavacua/AgentRD/paralogic#nonMonotonic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Logic> .
+<https://github.com/metavacua/AgentRD/paralogic#nonMonotonic> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non-monotonic reasoning" .
+<https://github.com/metavacua/AgentRD/paralogic#nonMonotonic> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#nonMonotonic> <http://www.w3.org/2004/02/skos/core#note> "Node verified as a real area; its RELATION to the cluster is user-hypothesis." .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Cluster> .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <http://www.w3.org/2004/02/skos/core#prefLabel> "Paraidentity / parareflexive logics (curator's organizing cluster)" .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <https://github.com/metavacua/AgentRD/paralogic#status> "user-asserted" .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <http://www.w3.org/2004/02/skos/core#note> "NOT an established literature term (searched; 'non-reflexive' is standard). The curator's cluster gathering the identity/reflexivity-failing logics tied to quantum no-go theorems, with unpublished results only partially visible from the cited sources." .
+<https://github.com/metavacua/AgentRD/paralogic#quantumIndistinguishability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Concept> .
+<https://github.com/metavacua/AgentRD/paralogic#quantumIndistinguishability> <http://www.w3.org/2004/02/skos/core#prefLabel> "Quantum indistinguishability / non-individuality of particles" .
+<https://github.com/metavacua/AgentRD/paralogic#quantumIndistinguishability> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#selfReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/metavacua/AgentRD/paralogic#Concept> .
+<https://github.com/metavacua/AgentRD/paralogic#selfReference> <http://www.w3.org/2004/02/skos/core#prefLabel> "Self-reference / semantic closure / truth predicate" .
+<https://github.com/metavacua/AgentRD/paralogic#selfReference> <https://github.com/metavacua/AgentRD/paralogic#status> "verified" .
+<https://github.com/metavacua/AgentRD/paralogic#paraconsistent> <https://github.com/metavacua/AgentRD/paralogic#rejects> <https://github.com/metavacua/AgentRD/paralogic#explosion> .
+<https://github.com/metavacua/AgentRD/paralogic#paracomplete> <https://github.com/metavacua/AgentRD/paralogic#rejects> <https://github.com/metavacua/AgentRD/paralogic#excludedMiddle> .
+<https://github.com/metavacua/AgentRD/paralogic#paranormal> <https://github.com/metavacua/AgentRD/paralogic#combines> <https://github.com/metavacua/AgentRD/paralogic#paraconsistent> .
+<https://github.com/metavacua/AgentRD/paralogic#paranormal> <https://github.com/metavacua/AgentRD/paralogic#combines> <https://github.com/metavacua/AgentRD/paralogic#paracomplete> .
+<https://github.com/metavacua/AgentRD/paralogic#LFI> <https://github.com/metavacua/AgentRD/paralogic#internalizes> <https://github.com/metavacua/AgentRD/paralogic#explosion> .
+<https://github.com/metavacua/AgentRD/paralogic#LFI> <https://github.com/metavacua/AgentRD/paralogic#dualOf> <https://github.com/metavacua/AgentRD/paralogic#LFU> .
+<https://github.com/metavacua/AgentRD/paralogic#LFI> <http://www.w3.org/2004/02/skos/core#broader> <https://github.com/metavacua/AgentRD/paralogic#paraconsistent> .
+<https://github.com/metavacua/AgentRD/paralogic#LFU> <https://github.com/metavacua/AgentRD/paralogic#internalizes> <https://github.com/metavacua/AgentRD/paralogic#excludedMiddle> .
+<https://github.com/metavacua/AgentRD/paralogic#LFU> <http://www.w3.org/2004/02/skos/core#broader> <https://github.com/metavacua/AgentRD/paralogic#paracomplete> .
+<https://github.com/metavacua/AgentRD/paralogic#mbCDE> <https://github.com/metavacua/AgentRD/paralogic#isA> <https://github.com/metavacua/AgentRD/paralogic#paranormal> .
+<https://github.com/metavacua/AgentRD/paralogic#mbCDE> <https://github.com/metavacua/AgentRD/paralogic#combines> <https://github.com/metavacua/AgentRD/paralogic#LFI> .
+<https://github.com/metavacua/AgentRD/paralogic#mbCDE> <https://github.com/metavacua/AgentRD/paralogic#combines> <https://github.com/metavacua/AgentRD/paralogic#LFU> .
+<https://github.com/metavacua/AgentRD/paralogic#LET> <https://github.com/metavacua/AgentRD/paralogic#formalizes> <https://github.com/metavacua/AgentRD/paralogic#carnielliRodrigues2019> .
+<https://github.com/metavacua/AgentRD/paralogic#LET> <http://www.w3.org/2004/02/skos/core#broader> <https://github.com/metavacua/AgentRD/paralogic#LFI> .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveIdentity> <https://github.com/metavacua/AgentRD/paralogic#rejects> <https://github.com/metavacua/AgentRD/paralogic#identityReflexivity> .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveIdentity> <https://github.com/metavacua/AgentRD/paralogic#motivatedBy> <https://github.com/metavacua/AgentRD/paralogic#quantumIndistinguishability> .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveConsequence> <https://github.com/metavacua/AgentRD/paralogic#rejects> <https://github.com/metavacua/AgentRD/paralogic#consequenceReflexivity> .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveConsequence> <https://github.com/metavacua/AgentRD/paralogic#motivatedBy> <https://github.com/metavacua/AgentRD/paralogic#selfReference> .
+<https://github.com/metavacua/AgentRD/paralogic#nonCommutative> <https://github.com/metavacua/AgentRD/paralogic#rejects> <https://github.com/metavacua/AgentRD/paralogic#exchange> .
+<https://github.com/metavacua/AgentRD/paralogic#nonCommutative> <https://github.com/metavacua/AgentRD/paralogic#isA> <https://github.com/metavacua/AgentRD/paralogic#substructural> .
+<https://github.com/metavacua/AgentRD/paralogic#nonAssociative> <https://github.com/metavacua/AgentRD/paralogic#rejects> <https://github.com/metavacua/AgentRD/paralogic#associativity> .
+<https://github.com/metavacua/AgentRD/paralogic#nonAssociative> <https://github.com/metavacua/AgentRD/paralogic#isA> <https://github.com/metavacua/AgentRD/paralogic#substructural> .
+<https://github.com/metavacua/AgentRD/paralogic#nonReflexiveConsequence> <https://github.com/metavacua/AgentRD/paralogic#isA> <https://github.com/metavacua/AgentRD/paralogic#substructural> .
+<https://github.com/metavacua/AgentRD/paralogic#basicLogic> <https://github.com/metavacua/AgentRD/paralogic#isA> <https://github.com/metavacua/AgentRD/paralogic#substructural> .
+<https://github.com/metavacua/AgentRD/paralogic#Lq> <https://github.com/metavacua/AgentRD/paralogic#builtOn> <https://github.com/metavacua/AgentRD/paralogic#basicLogic> .
+<https://github.com/metavacua/AgentRD/paralogic#Lq> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#zizzi2010> .
+<https://github.com/metavacua/AgentRD/paralogic#L2q> <https://github.com/metavacua/AgentRD/paralogic#extends> <https://github.com/metavacua/AgentRD/paralogic#Lq> .
+<https://github.com/metavacua/AgentRD/paralogic#Lnq> <https://github.com/metavacua/AgentRD/paralogic#extends> <https://github.com/metavacua/AgentRD/paralogic#Lq> .
+<https://github.com/metavacua/AgentRD/paralogic#quantumLogic> <https://github.com/metavacua/AgentRD/paralogic#rejects> <https://github.com/metavacua/AgentRD/paralogic#distributivity> .
+<https://github.com/metavacua/AgentRD/paralogic#kochenSpecker> <https://github.com/metavacua/AgentRD/paralogic#isA> <https://github.com/metavacua/AgentRD/paralogic#bellTheorem> .
+<https://github.com/metavacua/AgentRD/paralogic#kochenSpecker> <https://github.com/metavacua/AgentRD/paralogic#implies> <https://github.com/metavacua/AgentRD/paralogic#bivalence> .
+<https://github.com/metavacua/AgentRD/paralogic#refutational> <https://github.com/metavacua/AgentRD/paralogic#axiomatizes> <https://github.com/metavacua/AgentRD/paralogic#consequenceReflexivity> .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <http://www.w3.org/2004/02/skos/core#member> <https://github.com/metavacua/AgentRD/paralogic#Lq> .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <http://www.w3.org/2004/02/skos/core#member> <https://github.com/metavacua/AgentRD/paralogic#L2q> .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <http://www.w3.org/2004/02/skos/core#member> <https://github.com/metavacua/AgentRD/paralogic#Lnq> .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <http://www.w3.org/2004/02/skos/core#member> <https://github.com/metavacua/AgentRD/paralogic#nonReflexiveIdentity> .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <http://www.w3.org/2004/02/skos/core#member> <https://github.com/metavacua/AgentRD/paralogic#nonReflexiveConsequence> .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <http://www.w3.org/2004/02/skos/core#member> <https://github.com/metavacua/AgentRD/paralogic#popperianLogic> .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <http://www.w3.org/2004/02/skos/core#member> <https://github.com/metavacua/AgentRD/paralogic#kochenSpecker> .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <https://github.com/metavacua/AgentRD/paralogic#relatedTo> <https://github.com/metavacua/AgentRD/paralogic#refutational> .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <https://github.com/metavacua/AgentRD/paralogic#relatedTo> <https://github.com/metavacua/AgentRD/paralogic#nonMonotonic> .
+<https://github.com/metavacua/AgentRD/paralogic#paraidentityCluster> <https://github.com/metavacua/AgentRD/paralogic#witnessedBy> <https://github.com/metavacua/AgentRD/paralogic#zizzi2010> .
