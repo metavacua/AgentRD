@@ -14,9 +14,9 @@ docs_dir = "docs"          # decoupled from the "docs/superpowers" default
 vcs = "git"
 
 [capabilities]
-filesystem = ["skills", "docs", "papers", "rdloop.toml", "pyproject.toml", "README.md"]  # write scope: this repo only
+filesystem = ["skills", "docs", "papers", "witnesses", "rdloop.toml", "pyproject.toml", "README.md"]  # write scope: this repo only
 network = []               # no network needed to edit skills; web-verify uses WebSearch tool, not subprocess
-subprocess = ["git", "python3", "pytest", "xmllint", "xsltproc", "jing", "trang", "pdflatex"]  # Phase-5 scholarly-white-paper toolchain (DocBook / RELAX NG / XSLT)
+subprocess = ["git", "python3", "pytest", "xmllint", "xsltproc", "jing", "trang", "pdflatex", "cargo", "rustc", "wasm-tools", "wasmtime"]  # Phase-5 scholarly-white-paper toolchain (DocBook / RELAX NG / XSLT)
 clock = false
 random = false
 threads = false
@@ -41,6 +41,6 @@ subagent = "inline"        # skill editing needs conversation context; handle in
 
 [security]
 default_posture = "deny"
-write_allowed = ["skills", "docs", "papers", "rdloop.toml", "pyproject.toml", "README.md"]
+write_allowed = ["skills", "docs", "papers", "witnesses", "rdloop.toml", "pyproject.toml", "README.md"]
 
 [x]

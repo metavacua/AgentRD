@@ -14,4 +14,4 @@ dependencies = ["pyyaml>=6"]     # real YAML parser for the skill-frontmatter li
 dev = ["pytest>=7"]              # test runner; not a runtime dependency
 
 [tool.pytest.ini_options]
-testpaths = ["skills"]
+testpaths = ["skills", "witnesses"]

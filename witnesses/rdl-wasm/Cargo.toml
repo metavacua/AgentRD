@@ -1,0 +1,15 @@
+[package]
+name = "rdl-wasm"
+version = "0.1.0"
+edition = "2021"
+description = "A wasm32v1-none witness of the abstract RDL core: capability resolution, terminal classification, DOF invariant. Pure, no_std, zero ambient authority."
+license = "AGPL-3.0-or-later"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+opt-level = "s"
+lto = true
+panic = "abort"
+strip = true
