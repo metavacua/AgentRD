@@ -51,6 +51,13 @@ def _invoke(w, fn, *args):
     return int(r.stdout.strip().splitlines()[-1])
 
 
+def _invoke_f(w, fn, *args):
+    r = subprocess.run([WASMTIME, "run", "--invoke", fn, str(w), *map(str, args)],
+                       capture_output=True, text=True, env=ENV)
+    assert r.returncode == 0, r.stderr
+    return float(r.stdout.strip().splitlines()[-1])
+
+
 def test_hard_gate_zero_imports(wasm):
     # THE gate: a wasm32v1-none module importing nothing is provably powerless.
     assert "(import" not in _wat(wasm)
@@ -71,6 +78,36 @@ def test_domain_logic_via_wasmtime(wasm):
     assert _invoke(wasm, "classify_terminal", 0, 1, 1, 0, 0, 0) == 4          # essential undecidable
     assert _invoke(wasm, "dof_step_ok", 3, 4, 0, 0) == 0                      # DOF-increasing defect
     assert _invoke(wasm, "dof_step_ok", 3, 4, 0, 1) == 1                      # unless it classifies
+
+
+def test_node_object_abi_exports(wasm):
+    # Increment 2: a wasm32v1-none node-object exposes the pure MCTS interface.
+    wat = _wat(wasm)
+    for fn in ("node_puct", "node_q", "backprop_q", "node_kind", "node_branching"):
+        assert f'(export "{fn}"' in wat, f"missing node-ABI export {fn}"
+
+
+def test_cot_node_is_pure_and_linear(wasm):
+    # Chain-of-Thought is the leaf paradigm: genome tag 0, branching 1, and (like the
+    # core) ZERO imports — a powerless-by-default node-object.
+    assert _invoke(wasm, "node_kind") == 0
+    assert _invoke(wasm, "node_branching") == 1
+    assert "(import" not in _wat(wasm)
+
+
+def test_node_mcts_math_via_wasmtime(wasm):
+    assert _invoke_f(wasm, "node_q", 3.0, 4) == pytest.approx(0.75)          # W/N
+    assert _invoke_f(wasm, "backprop_q", 3.0, 4, 1.0) == pytest.approx(0.8)  # (W+v)/(N+1)
+    # PUCT = Q + 1.4·P·√N_parent/(1+N) = 0.5 + 1.4·0.25·4/5 = 0.78
+    assert _invoke_f(wasm, "node_puct", 0.5, 0.25, 4, 16) == pytest.approx(0.78)
+
+
+def test_cross_witness_puct(wasm):
+    import math
+    def puct_py(q, p, n, npar):
+        return q + 1.4 * p * math.sqrt(max(1, npar)) / (1 + n)
+    for (q, p, n, npar) in [(0.5, 0.25, 4, 16), (0.0, 1.0, 0, 1), (0.9, 0.1, 10, 100)]:
+        assert _invoke_f(wasm, "node_puct", q, p, n, npar) == pytest.approx(puct_py(q, p, n, npar), rel=1e-6)
 
 
 def test_cross_witness_agreement_with_schema_py(wasm):

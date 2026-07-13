@@ -37,5 +37,19 @@ Declared interface (the abstract RDL core's ports, one `func` export each):
 | `classify_terminal(inconsistent, undecidable, essential, is_inequality, feasible, determined) -> i32` | 0=DETERMINED 1=FEASIBLE 2=INCONSISTENT 3=UNDECIDABLE-nonessential 4=UNDECIDABLE-essential -1=not-terminal | `core/terminal.md` |
 | `dof_step_ok(f_before, f_after, activated, classified) -> i32` | 1 iff `ΔF ≤ 0` ∨ activated ∨ classified | `core/invariant.md` |
 
+### Node-object ABI (Increment 2 — each MCTS node is a `wasm32v1-none` object)
+
+| export | signature | meaning |
+|---|---|---|
+| `node_kind() -> i32` | genome tag | 0 = Chain-of-Thought (leaf paradigm) |
+| `node_branching() -> i32` | max children | CoT is linear: 1 (ToT will be `k`) |
+| `node_puct(q, prior, n, n_parent) -> f64` | `Q + 1.4·P·√N_parent/(1+N)` | AlphaZero selection score |
+| `node_q(w, n) -> f64` | `W/N` | mean action-value |
+| `backprop_q(w, n, v) -> f64` | `(W+v)/(N+1)` | value backprop |
+
+`node_puct` uses `libm::sqrt` — **`libm` is pure `no_std` software math, so imports stay
+zero**: the gate holds. The Chain-of-Thought node is characterized purely by `kind=0`,
+`branching=1`, and zero imports (a powerless-by-default node-object).
+
 Plus the three compiler-emitted defaults above. **Imports: none.** `test_wasm_gate.py`
-enforces this inventory and the zero-import gate.
+enforces this inventory, the node-object ABI, and the zero-import gate.
